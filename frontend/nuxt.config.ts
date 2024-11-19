@@ -8,11 +8,14 @@ export default defineNuxtConfig({
   },
   modules: [
     '@vesp/nuxt-fontawesome',
+    '@vueuse/nuxt',
+
   ],
   css: ['~/assets/scss/main.scss'],
   fontawesome: {
     icons: {
       solid: ['faHome', 'faUser', 'faCog', 'faArrowRight'],
+      regular: ['faLightbulb'],
     }
   },
   postcss: {

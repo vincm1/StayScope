@@ -20,6 +20,7 @@ export default {
         secondary: 'rgb(92,255,152)',
         white: '#ffffff',
         beige: '#F5FAF0',
+        lightgrey: 'rgb(232,236,229)',
       },
       fontFamily: {
         body: ['Nunito']

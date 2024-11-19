@@ -1,14 +1,17 @@
 <template>
-    <div class="LandingHero mt-1 flex items-center justify-center">
+    <div class="LandingHero flex items-center justify-center">
       <div class="hero-body font-init p-8 rounded-lg">
-        <div class="container text-center text-white">
+        <Info
+          title="Become a Betatester for our new product!"
+        />
+        <div class="container text-center text-beige">
           <!-- Headline -->
-          <h1 class="text-4xl font-bold font-beige leading-tight mb-5">
+          <h1 class="text-4xl font-bold font-beige leading-tight my-6">
             Everything you need to <br />
             elevate your guest experiences.
           </h1>
           <!-- Subtitle -->
-          <p class="subtitle font-beige text-lg mb-6">
+          <p class="subtitle font-beige text-lg mb-8">
             Elevate your hospitality game with the ultimate <br>
             experience management platform for modern hotels.
           </p>
@@ -18,8 +21,8 @@
               <ButtonHero />
             </NuxtLink>
           </div>
-          <div class="flex items-center text-sm mt-5">
-            <span class="text-md">Trusted by <span class="text-secondary font-play">leading</span> hotels:</span>
+          <div class="flex items-center justify-center text-xs mt-10">
+            <span>Trusted by <span class="text-secondary font-play">leading</span> hotels:</span>
             <ul class="flex justify-around space-x-5 ml-5">
                 <li>Steigenberger</li>
                 <li>Marriott</li>
@@ -29,8 +32,8 @@
         </div>
       </div>
     </div>
-    <div class="product_screen">
-        <img src="/images/product.png" alt="hero" class="w-[200]" />
+    <div class="product_screen mx-10">
+        <img src="/images/product.png" alt="hero" class="w-[-100]" />
       </div>
   </template>
   
