@@ -31,7 +31,7 @@
         <!-- Cards Section -->
         <div class="space-y-10 text-primary">
           <!-- Card 1 -->
-          <div data-aos="fade-left" class="p-4 border border-primary bg-lightbeige rounded-lg shadow-md">
+          <div data-aos="fade-left" class="p-4 border border-primary bg-lightbeige rounded-lg shadow-md overflow-hidden">
             <h2 class="text-center text-xl font-bold mb-2">Easy to set up</h2>
             <p class="text-sm lg:text-base">
               A single standardized platform for both in-house experiences, and those with local partners.
@@ -53,6 +53,11 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="flex justify-center space-x-4 mt-10">
+        <NuxtLink to="/get-started">
+            <ButtonHero />
+        </NuxtLink>
     </div>
   </section>
 </template>

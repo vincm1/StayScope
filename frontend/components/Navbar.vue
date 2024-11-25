@@ -6,7 +6,7 @@ const {x, y, isScrolled} = useScroll(threshhold)
 <template>
   <header class="container-md font-inter flex items-center justify-center my-10 mx-5">
     <nav 
-      :class="['fixed flex items-center justify-between rounded-full shadow-md transition-all duration-300 ease-in-out',
+      :class="['fixed flex items-center justify-between rounded-full shadow-md transition-all z-50 duration-300 ease-in-out',
         isScrolled ? 'bg-primary w-full max-w-6xl text-white px-4 py-2 transition' : 'bg-white w-full max-w-4xl px-4 py-2']">
       <!-- Logo Section -->
       <div class="nav-logo flex items-center">
@@ -40,3 +40,4 @@ const {x, y, isScrolled} = useScroll(threshhold)
 
 <style scoped>
 </style>
+

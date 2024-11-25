@@ -25,6 +25,7 @@ export default {
         bordercolor: '#E8EFE3',
         lightgreen: '#F0F8EA',
         lightbeige: '#F2F6EF',
+        lightb: '#F8FAF6',
       },
       fontFamily: {
         body: ['Nunito']

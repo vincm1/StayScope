@@ -1,13 +1,15 @@
 <script>
+import Cta from '~/components/Cta.vue';
+
 
 </script>
 
 <template>
-    <div>
-        <LandingHero />
-        <LandingProblem />
-        <LandingSoftware />
-    </div>
+    <LandingHero />
+    <LandingProblem />
+    <LandingSoftware />
+    <LandingSteps />
+    <Cta />
 </template>
 
 <style scoped>

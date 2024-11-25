@@ -6,12 +6,27 @@ export default defineNuxtConfig({
   alias: {
     assets: '/<rootDir>/assets',
   },
-  modules: ['@vesp/nuxt-fontawesome', '@vueuse/nuxt', 'nuxt-marquee', 'nuxt-aos'],
+  modules: ['@vesp/nuxt-fontawesome', '@vueuse/nuxt', 'nuxt-marquee', 'nuxt-aos', 'nuxt-calendly'],
   css: ['~/assets/scss/main.scss'],
   fontawesome: {
     icons: {
-      solid: ['faHome', 'faUser', 'faCog', 'faArrowRight', 'faCircleExclamation'],
-      regular: ['faLightbulb'],
+      solid: [
+        'faHome', 
+        'faUser', 
+        'faCog', 
+        'faArrowRight', 
+        'faCircleExclamation',
+        'faUser',
+        'faEnvelope',
+        'faMessage',
+      ],
+      regular: [
+        'faLightbulb',
+        'faUser',
+        'faMessage',
+        'faSquareCheck',
+      ],
+
     }
   },
   postcss: {

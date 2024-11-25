@@ -16,6 +16,7 @@
     "lodash-es": "^4.17.21",
     "nuxt": "^3.14.159",
     "nuxt-aos": "^1.2.5",
+    "nuxt-calendly": "^0.1.21",
     "nuxt-marquee": "^1.0.4",
     "sass": "^1.81.0",
     "sass-loader": "^16.0.3",
