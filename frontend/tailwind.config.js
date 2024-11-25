@@ -21,6 +21,10 @@ export default {
         white: '#ffffff',
         beige: '#F5FAF0',
         lightgrey: 'rgb(232,236,229)',
+        grey: '#769492',
+        bordercolor: '#E8EFE3',
+        lightgreen: '#F0F8EA',
+        lightbeige: '#F2F6EF',
       },
       fontFamily: {
         body: ['Nunito']

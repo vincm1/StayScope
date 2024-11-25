@@ -15,7 +15,10 @@
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "nuxt": "^3.14.159",
+    "nuxt-aos": "^1.2.5",
+    "nuxt-marquee": "^1.0.4",
     "sass": "^1.81.0",
+    "sass-loader": "^16.0.3",
     "scss": "^0.2.4",
     "vue": "latest",
     "vue-router": "latest"

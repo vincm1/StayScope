@@ -5,6 +5,8 @@
 <template>
     <div>
         <LandingHero />
+        <LandingProblem />
+        <LandingSoftware />
     </div>
 </template>
 
