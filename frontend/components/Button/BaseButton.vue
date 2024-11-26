@@ -10,6 +10,11 @@ defineProps({
     required: false,
     default: 'bg-primary',
   },
+  borderClass: {
+    type: String,
+    required: false,
+    default: 'border-none',
+  },
   textClass: {
     type: String,
     required: false,
@@ -22,6 +27,11 @@ defineProps({
     validator: (value: string) => {
       return ['sm', 'md', 'lg'].includes(value);
     },
+  },
+  hoverEnabled: {
+    type: Boolean,
+    required: false,
+    default: true, // Hover effects enabled by default
   },
   disabled: {
     type: Boolean,
@@ -54,10 +64,11 @@ defineProps({
       'rounded-full shadow-sm',
       bgClass,
       textClass,
+      borderClass,
       sizeClass === 'sm' ? 'px-2 py-1 text-sm' : '',
       sizeClass === 'md' ? 'px-5 py-2 text-sm' : '',
       sizeClass === 'lg' ? 'px-6 py-3 text-lg' : '',
-      bgClass === 'bg-primary' ? 'hover:bg-secondary hover:text-primary hover:transform-scale-105' : '',
+      hoverEnabled && bgClass === 'bg-primary' ? 'hover:bg-secondary hover:text-primary hover:transform-scale-105' : '',
     ]"
     :disabled="disabled"
   >

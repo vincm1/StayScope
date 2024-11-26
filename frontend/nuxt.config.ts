@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   alias: {
     assets: '/<rootDir>/assets',
   },
-  modules: ['@vesp/nuxt-fontawesome', '@vueuse/nuxt', 'nuxt-marquee', 'nuxt-aos', 'nuxt-calendly'],
+  modules: ['@vesp/nuxt-fontawesome', '@vueuse/nuxt', '@primevue/nuxt-module', '@nuxt/image' ,'nuxt-marquee', 'nuxt-aos', 'nuxt-calendly', '@nuxt/image'],
   css: ['~/assets/scss/main.scss'],
   fontawesome: {
     icons: {
@@ -19,6 +19,9 @@ export default defineNuxtConfig({
         'faUser',
         'faEnvelope',
         'faMessage',
+        'faSpa',
+        'faHeart',
+        'faUtensils',
       ],
       regular: [
         'faLightbulb',
@@ -54,5 +57,28 @@ export default defineNuxtConfig({
     once: false, // whether animation should happen only once - while scrolling down
     mirror: false, // whether elements should animate out while scrolling past them
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+  },
+   // optional config
+  calendly: {
+    /**
+     * Setting to `false` disables the module.
+     * @default true
+     * @description Use this setting to disable the module.
+     */
+    isEnabled: true,
+
+    /**
+     * Loads the required CSS for Calendly directly into your app. Saves a HTTP Request.
+     * @default true
+     * @description Disable if you already load https://assets.calendly.com/assets/external/widget.css by yourself, or you want to load a custom CSS.
+     */
+    loadWidgetCSS: true,
+
+    /**
+     * Loads a required SVG Asset for Calendly directly into your app. Saves a HTTP Request.
+     * @default true
+     * @description Disable if you already load https://assets.calendly.com/assets/external/close-icon.svg by yourself, or you want to load a custom SVG.
+     */
+    loadWidgetCloseIconSvg: true
   },
 })

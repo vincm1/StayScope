@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const options = {
+        url: 'https://calendly.com/vincent-michler94/30min',   
+    };
+</script>
 
 <template>
   <section class="bg-lightbeige text-primary py-20 px-6">
@@ -48,6 +52,10 @@
                 Done-with-you migration. We’ll help you navigate the process with zero downtime.
             </p>
         </div>
+    </div>
+
+    <div>
+      <CalendlyInlineWidget v-bind="options" />
     </div>
   </section>
 </template>

@@ -1,4 +1,5 @@
 <script>
+import About from '~/components/About.vue';
 import Cta from '~/components/Cta.vue';
 
 
@@ -8,6 +9,8 @@ import Cta from '~/components/Cta.vue';
     <LandingHero />
     <LandingProblem />
     <LandingSoftware />
+    <About />
+    <LandingActivities />
     <LandingSteps />
     <Cta />
 </template>
