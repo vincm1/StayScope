@@ -85,124 +85,144 @@ const externalTabs = {
       <h1 class="text-4xl text-center text-primary font-bold">
         The central Hub for all your experiences
       </h1>
-  
-      <!-- Buttons to switch between tabs -->
-      <div class="flex justify-center my-8 items-center gap-2">
-        <ButtonBaseButton
-          buttonText="Inhouse"
-          :bgClass="activeButton === 'Inhouse' ? 'bg-primary' : 'bg-transparent'"
-          :textClass="activeButton === 'Inhouse' ? 'text-white' : 'text-primary'"
-          borderClass="border border-primary"
-          :hoverEnabled="false"
-          @click="changeActiveButton('Inhouse')"
-        />
-        <ButtonBaseButton
-          buttonText="External"
-          :bgClass="activeButton === 'External' ? 'bg-primary' : 'bg-transparent'"
-          :textClass="activeButton === 'External' ? 'text-white' : 'text-primary'"
-          borderClass="border border-primary"
-          :hoverEnabled="false"
-          @click="changeActiveButton('External')"
-        />
-      </div>
-  
-      <!-- Inhouse Tabs -->
-      <div v-if="activeButton === 'Inhouse'">
-        <div class="grid md:grid-cols-2 gap-8 px-6 border border-grey rounded-lg shadow-md mt-5 py-10">
-          <!-- Accordion Section -->
-          <div class="col-1 card">
-            <Accordion
-              :value="activeTab"
-              unstyled
-            >
-              <AccordionPanel
-                v-for="(tab, index) in inhouseTabs.tabs"
-                :key="tab.title"
-                :value="index"
-                @click="activeTab = index"
+      <div class="container mx-auto text-primary">
+        <!-- Buttons to switch between tabs -->
+        <div class="flex justify-center my-8 items-center gap-2">
+          <ButtonBaseButton
+            buttonText="Inhouse"
+            :bgClass="activeButton === 'Inhouse' ? 'bg-primary' : 'bg-transparent'"
+            :textClass="activeButton === 'Inhouse' ? 'text-white' : 'text-primary'"
+            borderClass="border border-primary"
+            :hoverEnabled="false"
+            @click="changeActiveButton('Inhouse')"
+          />
+          <ButtonBaseButton
+            buttonText="External"
+            :bgClass="activeButton === 'External' ? 'bg-primary' : 'bg-transparent'"
+            :textClass="activeButton === 'External' ? 'text-white' : 'text-primary'"
+            borderClass="border border-primary"
+            :hoverEnabled="false"
+            @click="changeActiveButton('External')"
+          />
+        </div>
+    
+        <!-- Inhouse Tabs -->
+        <div v-if="activeButton === 'Inhouse'">
+          <div class="grid md:grid-cols-2 gap-8 px-6 border border-lightgrey rounded-lg shadow-lg mt-5 py-10">
+            <!-- Accordion Section -->
+            <div class="col-1 card">
+              <Accordion
+                :value="activeTab"
                 unstyled
-                class="my-5 pb-4 border-b border-primary"
               >
-                <AccordionHeader
+                <AccordionPanel
+                  v-for="(tab, index) in inhouseTabs.tabs"
+                  :key="tab.title"
+                  :value="index"
+                  @click="activeTab = index"
                   unstyled
-                  class="flex gap-5 justify-center text-3xl items-center mb-8 pl-3"
+                  pt:root="text-md p-4 border-b border-primary py-10 mx-10"
                 >
-                  <font-awesome :icon="['fas', tab.icon]" class="text-md" />
-                  {{ tab.title }}
-                </AccordionHeader>
-                <AccordionContent 
+                  <AccordionHeader
+                    icon="pi pi-arrow-down"
                     unstyled
-                    class="pl-5"
-                >
-                  {{ tab.content }}
-                </AccordionContent>
-              </AccordionPanel>
-            </Accordion>
-          </div>
-  
-          <!-- Image Section -->
-          <div class="text-center">
-            <NuxtImg
-              v-if="inhouseTabs.tabs[activeTab]?.image"
-              :src="inhouseTabs.tabs[activeTab]?.image"
-              :alt="inhouseTabs.tabs[activeTab]?.title"
-              class="rounded-lg shadow-md"
-              width="600"
-              height="400"
-            />
+                    class="flex gap-5 justify-center text-3xl items-center mb-8 pl-3"
+                  >
+                    <font-awesome :icon="['fas', tab.icon]" class="text-md" />
+                    {{ tab.title }}
+                  </AccordionHeader>
+                  <AccordionContent 
+                      unstyled
+                      class="pl-5"
+                  >
+                    {{ tab.content }}
+                  </AccordionContent>
+                </AccordionPanel>
+              </Accordion>
+            </div>
+    
+            <!-- Image Section -->
+            <div class="image-container">
+              <NuxtImg
+                v-if="inhouseTabs.tabs[activeTab]?.image"
+                :src="inhouseTabs.tabs[activeTab]?.image"
+                :alt="inhouseTabs.tabs[activeTab]?.title"
+                class="rounded-lg shadow-md text-center align-center"
+                width="600"
+                height="400"
+              />
+            </div>
           </div>
         </div>
-      </div>
-  
-      <!-- External Tabs -->
-      <div v-else-if="activeButton === 'External'">
-        <div class="grid md:grid-cols-2 gap-8 px-6 border border-grey rounded-lg shadow-md mt-5 py-10">
-          <!-- Accordion Section -->
-          <div class="col-1 card">
-            <Accordion
-              :value="activeTab"
-              unstyled
-            >
-              <AccordionPanel
-                v-for="(tab, index) in externalTabs.tabs"
-                :key="tab.title"
-                :value="index"
-                @click="activeTab = index"
+    
+        <!-- External Tabs -->
+        <div v-else-if="activeButton === 'External'">
+          <div class="grid md:grid-cols-2 gap-8 px-6 border border-grey rounded-lg shadow-md mt-5 py-10">
+            <!-- Accordion Section -->
+            <div class="col-1 card">
+              <Accordion
+                :value="activeTab"
                 unstyled
-                class="my-5 pb-4 border-b border-primary"
               >
-                <AccordionHeader
-                  @click="activeTab = tab.value"
+                <AccordionPanel
+                  v-for="(tab, index) in externalTabs.tabs"
+                  :key="tab.title"
+                  :value="index"
+                  @click="activeTab = index"
                   unstyled
-                  class="flex gap-5 justify-center text-3xl items-center mb-8"
+                  class="my-5 pb-4 border-b border-primary"
                 >
-                  <font-awesome :icon="['fas', tab.icon]" class="text-md" />
-                  {{ tab.title }}
-                </AccordionHeader>
-                <AccordionContent unstyled>
-                  {{ tab.content }}
-                </AccordionContent>
-              </AccordionPanel>
-            </Accordion>
+                  <AccordionHeader
+                    @click="activeTab = tab.value"
+                    unstyled
+                    pt:icon="text-white text-xl"
+                    class="flex gap-5 justify-center text-3xl items-center mb-8"
+                    icon="pi pi-check"
+                  >
+                    <font-awesome :icon="['fas', tab.icon]" class="text-md" />
+                    {{ tab.title }}
+                  </AccordionHeader>
+                  <AccordionContent 
+                    unstyled
+                    pt:icon="text-white text-xl"
+                  >
+                    {{ tab.content }}
+                  </AccordionContent>
+                </AccordionPanel>
+              </Accordion>
+            </div>
+    
+            <!-- Image Section -->
+            <div class="image-container">
+              <NuxtImg
+                v-if="externalTabs.tabs[activeTab]?.image"
+                :src="externalTabs.tabs[activeTab]?.image"
+                :alt="externalTabs.tabs[activeTab]?.title"
+                class="rounded-lg shadow-md"
+                width="600"
+                height="400"
+              />
+            </div>
           </div>
-  
-          <!-- Image Section -->
-          <div class="text-center">
-            <NuxtImg
-              v-if="externalTabs.tabs[activeTab]?.image"
-              :src="externalTabs.tabs[activeTab]?.image"
-              :alt="externalTabs.tabs[activeTab]?.title"
-              class="rounded-lg shadow-md"
-              width="600"
-              height="400"
-            />
-          </div>
-        </div>
+      </div>
       </div>
     </section>
 </template>
-  
- 
+
 <style scoped lang="scss">
+.image-container {
+  display: flex;
+  justify-content: center; /* Align horizontally */
+  align-items: center; /* Align vertically */
+  height: 100%; /* Ensure the container takes full height */
+}
+
+.image-container img {
+  max-height: 400px; /* Set the maximum height for images */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image scales properly without stretching */
+  border-radius: 8px; /* Optional: Add rounded corners for aesthetics */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for style */
+}
 
 </style>

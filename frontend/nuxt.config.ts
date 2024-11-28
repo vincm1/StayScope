@@ -22,6 +22,7 @@ export default defineNuxtConfig({
         'faSpa',
         'faHeart',
         'faUtensils',
+        'faQuoteLeft',
       ],
       regular: [
         'faLightbulb',

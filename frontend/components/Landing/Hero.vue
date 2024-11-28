@@ -24,6 +24,7 @@
           <div class="flex items-center justify-center text-xs mt-10">
             <span>Trusted by <span class="text-secondary font-play">leading</span> hotels:</span>
             <ul class="flex justify-around space-x-5 ml-5">
+                        
                 <li>Steigenberger</li>
                 <li>Marriott</li>
                 <li>Radisson</li>
@@ -32,8 +33,8 @@
         </div>
       </div>
     </div>
-    <div class="product_screen mx-10">
-        <img src="/images/product.png" alt="hero" class="w-[-100]" />
+      <div class="product_screen flex items-center justify-center text-center mx-10">
+        <img src="/images/product.png" alt="hero" class="w-[-100] text-center" />
       </div>
   </template>
   

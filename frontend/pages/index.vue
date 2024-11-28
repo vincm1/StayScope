@@ -11,6 +11,7 @@ import Cta from '~/components/Cta.vue';
     <LandingSoftware />
     <About />
     <LandingActivities />
+    <Testimonial />
     <LandingSteps />
     <Cta />
 </template>
