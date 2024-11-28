@@ -67,7 +67,7 @@ defineProps({
       borderClass,
       sizeClass === 'sm' ? 'px-2 py-1 text-sm' : '',
       sizeClass === 'md' ? 'px-5 py-2 text-sm' : '',
-      sizeClass === 'lg' ? 'px-6 py-3 text-lg' : '',
+      sizeClass === 'lg' ? 'px-10 py-3 text-lg' : '',
       hoverEnabled && bgClass === 'bg-primary' ? 'hover:bg-secondary hover:text-primary hover:transform-scale-105' : '',
     ]"
     :disabled="disabled"

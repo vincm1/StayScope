@@ -82,9 +82,14 @@ const externalTabs = {
 
 <template>
     <section class="activities bg-white px-10 py-20">
+      <h2 class="text-center text-1xl text-grey mb-5">Activities & Experiences</h2>
       <h1 class="text-4xl text-center text-primary font-bold">
         The central Hub for all your experiences
       </h1>
+      <!-- Subheading -->
+      <p class="text-center text-lg lg:text-xl text-primary my-3 leading-relaxed">
+        List all your experience whether internal such as Spa and treatments or external activities from coportating OTAs and local partners.
+      </p>  
       <div class="container mx-auto text-primary">
         <!-- Buttons to switch between tabs -->
         <div class="flex justify-center my-8 items-center gap-2">

@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section class="bg-white px-4 py-8">
+  <section class="bg-white px-4 py-12">
     <div class="text-center mb-10">
         <!-- Heading -->
         <h1 class="text-1xl text-grey text-playfair mb-5">
@@ -54,7 +54,7 @@
         </div>
       </div>
     </div>
-    <div class="flex justify-center space-x-4 mt-10">
+    <div class="flex justify-center space-x-4 mt-10 mb-6">
         <NuxtLink to="/get-started">
             <ButtonHero />
         </NuxtLink>

@@ -27,12 +27,17 @@ const {x, y, isScrolled} = useScroll(threshhold)
 
       <!-- Button Section --> 
       <div class="nav-buttons flex space-x-4">
-        <ButtonBaseButton
-          :bgClass="isScrolled ? 'bg-secondary' : 'bg-primary'"
-          :textClass="isScrolled ? 'text-primary' : 'text-secondary'"
-          sizeClass="md"
-        >Book Demo
-        </ButtonBaseButton>
+        <NuxtLink
+         to="/demo"
+        >
+          <ButtonBaseButton
+            :bgClass="isScrolled ? 'bg-secondary' : 'bg-primary'"
+            :textClass="isScrolled ? 'text-primary' : 'text-secondary'"
+            sizeClass="md"
+          >Book Demo
+          </ButtonBaseButton>
+        </NuxtLink>
+        
       </div>
     </nav>
   </header>

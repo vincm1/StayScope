@@ -54,8 +54,16 @@ const updateTestimonialContent = (company: string) => {
 
 <template>
     <section class="bg-white">
-      <div class="container mx-auto py-20">
-        <div class="card mx-20 bg-beige p-10 rounded-lg shadow-lg">
+      <div class="container mx-auto pb-20">
+        <h2 class="text-center text-1xl text-grey text-playfair mb-5">What our Partners say</h2>
+        <h1 class="text-4xl text-center text-primary font-bold">
+          Experience Economy
+        </h1>
+        <!-- Subheading -->
+        <p class="text-center text-lg lg:text-xl text-primary my-3 leading-relaxed">
+          Over 50 partners have joined us to create a seamless experience for their guests.
+        </p>
+        <div class="card mt-10 mx-20 bg-beige p-10 rounded-lg shadow-lg">
           <h1 class="text-4xl text-primary font-bold ml-20">
             {{selectedCompany.header}}
           </h1>
