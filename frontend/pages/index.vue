@@ -3,15 +3,10 @@
 
 <template>
     <LandingHero />
-    <LandingProblem />
-    <LandingSoftware />
-    <About />
-    <LandingActivities />
-    <Testimonial />
-    <Kpis />
-    <LandingSteps />
-    <Cta />
 </template>
 
 <style scoped lang="scss">
+* {
+  outline: 1px solid red;
+}
 </style>

@@ -55,7 +55,7 @@
       </div>
     </div>
     <div class="flex justify-center space-x-4 mt-10 mb-6">
-        <NuxtLink to="/get-started">
+        <NuxtLink to="#book-demo">
             <ButtonHero />
         </NuxtLink>
     </div>

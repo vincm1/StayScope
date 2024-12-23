@@ -17,7 +17,7 @@
           </p>
           <!-- Call to Action -->
           <div class="flex justify-center space-x-4 mb-5">
-            <NuxtLink to="/get-started">
+            <NuxtLink to="#book-demo">
               <ButtonHero />
             </NuxtLink>
           </div>

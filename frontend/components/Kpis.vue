@@ -38,7 +38,7 @@
       </div>
       <div class="flex justify-center gap-4">
         <NuxtLink
-        to="/get-started"
+        to="#book-demo"
         class="items-center justify-center flex py-20"
         >
             <ButtonHero

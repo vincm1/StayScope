@@ -1,12 +1,12 @@
 <template>
     <div
       :class="[
-        'cta container-sm flex items-center justify-center gap-4 rounded-full px-3 py-2 transition-all duration-300 opacity-80',
+        'cta flex-shrink flex items-center justify-center gap-3 rounded-full px-3 py-2 transition-all duration-300 opacity-80',
         bgClass,
       ]"
     >
         <font-awesome class="text-primary" :icon="['far', 'lightbulb']" />
-        <p :class="['font-bold', textClass]">{{ title }}</p>
+        <p :class="['font-bold text-center text-sm md:text-lg lg:text-xl', textClass]">{{ title }}</p>
     </div>
   </template>
   
@@ -38,9 +38,6 @@
   <style scoped>
   .cta-container {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  }
-  .cta-button:hover {
-    transform: scale(1.05);
   }
   </style>
   

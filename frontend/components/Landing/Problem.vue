@@ -13,8 +13,8 @@ const keywords =
 </script>
 
 <template>
-  <section class="Problem">
-    <div class="bg-white text-primary container-sm text-center py-5">
+  <section class="problem max-w-full bg-white text-primary px-4">
+    <div class="bg-white text-primary container-sm text-center mx-auto py-5">
       <!-- Heading -->
       <h1 class="text-1xl text-grey text-playfair mb-5">Problem</h1>
 
@@ -31,7 +31,7 @@ const keywords =
       </div>
 
       <!-- Continuous Scrolling Keywords -->
-      <div class="keywords-container my-10">
+      <div class="keywords-container my-10 mx-auto">
         <NuxtMarquee :speed="50" class="flex items-center">
           <div
             v-for="(word, index) in keywords"
