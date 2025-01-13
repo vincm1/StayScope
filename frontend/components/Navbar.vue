@@ -13,65 +13,8 @@ const toggleSidebar = () => {
 </script>
 
 <template>
-
-  <!-- <header class="font-inter sm:flex sm:justify-center sm:items-center sm:px-4 sm:py-3 sm:mx-2 sm:my-6">
-    <nav
-      :class="['fixed flex items-center justify-between rounded-full shadow-md transition-all z-50 duration-300 ease-in-out',
-        isScrolled ? 'bg-primary w-full max-w-6xl text-white px-4 py-2 transition' : 'bg-white w-full max-w-4xl px-4 py-2']"
-      class="w-30"
-      >
-      <div class="nav-logo flex items-center">
-        <NuxtLink to="/">
-          <img 
-            :src="isScrolled ? '/images/logo-light.svg' : '/images/logo.svg'" 
-            alt="logo" 
-          />
-        </NuxtLink>
-      </div>
-
-      <div class="max-md:hidden nav-links space-x-6">
-        <NuxtLink to="/listings" class="hover:underline">Listings</NuxtLink>
-        <NuxtLink to="/about" class="hover:underline">About</NuxtLink>
-        <NuxtLink to="/contact" class="hover:underline">Contact</NuxtLink>
-      </div>
-
-    <div class="inline-flex gap-2">
-      <div class="nav-buttons flex space-x-2">
-        <NuxtLink
-         to="#book-demo"
-        >
-          <ButtonBaseButton
-            :bgClass="isScrolled ? 'bg-secondary' : 'bg-primary'"
-            :textClass="isScrolled ? 'text-primary' : 'text-secondary'"
-            sizeClass="md"
-          >Book Demo
-          </ButtonBaseButton>
-        </NuxtLink>
-        
-      </div>
-
-      <div class="lg:hidden flex">
-        <button @click="toggleMenu" class="p-2 focus:outline-none">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            class="w-6 h-6">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3 6h18M3 12h18M3 18h18"/>
-          </svg>
-        </button>
-      </div>
-    </div>  
-    </nav>
-  </header> -->
-
   <header class="flex justify-center mt-5 mb-10">
-    <nav class="fixed flex justify-between mx-5 px-4 py-2 rounded-full gap-20 shadow-md"
+    <nav class="fixed flex justify-between mx-5 px-4 py-2 rounded-full gap-20 shadow-md min-w-[95%] sm:min-w-[95%] md:min-w-[50%]"
     :class="{ 'bg-primary text-white lg:w-2/3 transition-all z-50 duration-300 ease-in-out': isScrolled, 'bg-white text-black w-auto': !isScrolled }"
     >
       <NuxtLink to="/">
@@ -155,8 +98,6 @@ const toggleSidebar = () => {
         </div>
           
       </aside>
-
-
     </nav>
   </header>
 

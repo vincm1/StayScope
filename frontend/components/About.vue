@@ -42,7 +42,7 @@
   </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .leading-relaxed {
   line-height: 1.75; /* Improve readability */
 }

@@ -3,6 +3,9 @@
 
 <template>
     <LandingHero />
+    <LandingProblem />
+    <LandingSoftware />
+    <LandingSteps />
 </template>
 
 <style scoped lang="scss">
