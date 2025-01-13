@@ -1,28 +1,25 @@
 <script setup lang="ts">
 const keywords = 
     [
-        "Revenue management",
-        "Impersonal",
-        "Guests experience",
-        "Experience packages",
-        "Integration",
-        "Uncurated",
-        "Experience Economy",
-        "TAs & OTAs",
+        "Experiences",
+        "UP-Selling",
+        "Guest experience",
+        "Personalization",
+        "Cross-Selling",
     ]
 </script>
 
 <template>
-  <section class="problem max-w-full bg-white text-primary px-4">
-    <div class="bg-white text-primary container-sm text-center mx-auto py-5">
+  <section class="problem bg-white text-primary px-4 py-10">
+    <div class="bg-white text-primary container-sm text-center mx-auto py-5" data-aos="fade-up">
       <!-- Heading -->
-      <h1 class="text-1xl text-grey text-playfair mb-5">Problem</h1>
+      <h1 class="text-1xl text-grey text-playfair mb-5">PROBLEM</h1>
 
       <!-- Problem Statement -->
       <div>
-        <p class="text-3xl my-3">Are you leaving revenue on the table?</p>
-        <p class="text-3xl container-sm mx-10 mb-8">
-          Provide your guests an unforgettable all-around package by integrating TAs and OTAs into your revenue engine.
+        <p class="text-2xl md:text-4xl font-bold my-3">Guests require curated and personalized experiences</p>
+        <p class="text-xl md:text-2xl mx-5 md:mx-20 my-8">
+          Create a seemless experience for your guests by providing them with curated and personalized experiences
         </p>
         <NuxtLink to="/signup" class="pt-5 hover:underline transition">
           Try StayScope for free
