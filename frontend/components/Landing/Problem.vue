@@ -11,7 +11,7 @@ const keywords =
 
 <template>
   <section class="problem bg-white text-primary px-4 py-10">
-    <div class="bg-white text-primary container-sm text-center mx-auto py-5" data-aos="fade-up">
+    <div class="text-primary container-sm text-center mx-auto py-5" data-aos="fade-up">
       <!-- Heading -->
       <h1 class="text-1xl text-grey text-playfair mb-5">PROBLEM</h1>
 
@@ -22,7 +22,7 @@ const keywords =
           Create a seemless experience for your guests by providing them with curated and personalized experiences
         </p>
         <NuxtLink to="/signup" class="pt-5 hover:underline transition">
-          Try StayScope for free
+          Try expentura for free
           <font-awesome class="arrow-icon pl-2" :icon="['fas', 'arrow-right']" />
         </NuxtLink>
       </div>

@@ -20,7 +20,7 @@ const toggleSidebar = () => {
       <NuxtLink to="/">
         <img 
           class="justify-start pt-1"
-          :src="isScrolled ? '/images/logo-light.svg' : '/images/logo.svg'" 
+          :src="isScrolled ? '/images/logo-light.svg':'/images/logo.svg'"
           alt="logo" 
         />
       </NuxtLink>
@@ -104,6 +104,5 @@ const toggleSidebar = () => {
 </template>
 
 <style scoped>
-
 </style>
 
