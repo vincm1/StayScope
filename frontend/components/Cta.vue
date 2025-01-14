@@ -6,7 +6,7 @@
       <div class="cta-circle-container col-span-1 lg:col-span-2">
         <div class="cta-circle"></div>
       </div>
-      <div class="cta-main-wrapper col-span-4 lg:col-span-2 text-center flex items-center justify-center">
+      <div class="cta-main-wrapper bg-primarydark col-span-4 lg:col-span-2 text-center flex items-center justify-center">
         <div class="cta-main-content flex flex-col items-center py-20 my-12 text-center rounded-lg">
           <h1 class="text-2xl font-bold mb-4">
             Supercharge your 
@@ -65,7 +65,6 @@
   }
 
   .cta-main-wrapper {
-    background-image: linear-gradient(270deg, #102d21, #1b4333 50%, #102d21);
     background-origin: border-box;
     background-clip: padding-box, border-box;
   }

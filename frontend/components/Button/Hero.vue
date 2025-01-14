@@ -1,3 +1,13 @@
+<script lang="ts" setup>
+defineProps({
+  buttonText: {
+    type: String,
+    required: false,
+    default: 'Book Demo',
+  },
+});
+</script>
+
 <template>
   <button class="btn-hero flex items-center justify-center bg-secondary text-primary text-md px-5 py-2 rounded-full shadow-sm hover:bg-primary hover:border-2 hover:text-secondary hover:border-secondary transition-all duration-300 relative overflow-hidden">
     <span class="text transition-transform duration-300"><slot>{{buttonText}}</slot></span>

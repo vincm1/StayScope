@@ -15,6 +15,7 @@ export default defineNuxtConfig({
         'faUser', 
         'faCog', 
         'faArrowRight', 
+        'faArrowUp',
         'faCircleExclamation',
         'faUser',
         'faEnvelope',

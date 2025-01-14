@@ -6,4 +6,35 @@
 @tailwind components;
 @tailwind utilities;
 
-  
+:root {
+    --main-green: #133024;
+    --dark-green: #2b4c3e;
+    --highlight-green: #5cff98;
+    --light-green: #f8faf6;
+    --white: white;
+    --light-bg-green: #f0f8ea;
+    --light-blue: #d5faff;
+    --sizing--radius-normal: 15px;
+    --button-radius: 32px;
+    --graph--graph-border: #e4ecde;
+    --orange: #ffa041;
+    --decor-grey: #d8dfd3;
+    --light-orange: #ffeddd;
+    --med-green: #102d21;
+    --grey-green: #d8dfd3;
+    --yellow: #ffd706;
+    --bright-blue: #b7f3f7;
+    --amber: #f7b200;
+    --bright-purple: #5386ff;
+    --mogul-blue: #12324b;
+    --navy-blue: #0077c8;
+    --table-border: #e4ecde;
+    --black: #000;
+    --graph--graph-bg: #f2f6ef;
+    --graph--grey-pole-border: #bcc4b6;
+    --graph--grey-pole-bg: #d9e0d3;
+    --graph--green-pole-border: #56e38a;
+    --graph--green-pole-bg: #5cff98;
+    --tabs-text: #f5faf066;
+    --light-purple: #e2ecff;
+}

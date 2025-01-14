@@ -7,7 +7,7 @@
         <h1 class="text-1xl text-grey text-playfair mb-5">
           HOSPITALITY FUTURE
         </h1>
-        <h1 class="text-2xl md:text-4xl font-bold my-3">
+        <h1 class="text-primary text-2xl md:text-4xl font-bold my-3">
           Maximize Revenue with Smart Up- and Cross-Selling
         </h1>
         <!-- Subheading -->

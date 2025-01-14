@@ -11,7 +11,7 @@ const keywords =
 
 <template>
   <section class="problem bg-white text-primary px-4 py-10">
-    <div class="text-primary container-sm text-center mx-auto py-5" data-aos="fade-up">
+    <div class="text-center mx-auto py-5" data-aos="fade-up">
       <!-- Heading -->
       <h1 class="text-1xl text-grey text-playfair mb-5">PROBLEM</h1>
 
