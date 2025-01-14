@@ -9,60 +9,51 @@
 </script>
 
 <template>
-    <section class="bg-white py-20">
-      <h2 class="text-center text-1xl text-grey text-playfair">Numbers</h2>
-      <h1 class="text-4xl text-center text-primary font-bold mt-3">
-        Our results say it all
+  <section class="bg-white px-6 py-16 mx-auto">
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <h1 class="text-3xl font-semibold text-gray-800">
+        We work with all businesses
       </h1>
-      <!-- Subheading -->
-      <p class="text-center text-lg lg:text-xl text-primary leading-relaxed my-5">
-        Proven performance, to take the guesswork out of your experience offer.
+      <p class="text-lg text-gray-600 mt-4">
+        Switch to OpenPay for fewer headaches, more payments, increased revenue,
+        reduced costs, and simplified tools. Users reported better business
+        control and more time for growth.
       </p>
-      <!-- KPI Section -->
-      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10 mt-20 px-20">
-        <div
-          v-for="(kpi, index) in kpis"
-          :key="index"
-          class="text-center " 
-        >
-            <div class="kpicard bg-primary rounded-lg shadow-lg py-10 px-4 hover:border-secondary hover:border-4 hover:shadow-2xl hover:cursor-auto duration-100" >
-                <font-awesome
-                    :icon="['fas', kpi.icon ]"
-                    class="text-4xl text-secondary pb-3"
-                />
-                <h3 class="text-4xl font-bold text-secondary pb-2">{{ kpi.value }}</h3>
-                <p class="text-lg font-medium text-white">{{ kpi.label }}</p>
-                <p class="text-sm text-white mt-2">{{ kpi.description }}</p>
-            </div>
-        </div>
-      </div>
-      <div class="flex justify-center gap-4">
-        <NuxtLink
-        to="#book-demo"
-        class="items-center justify-center flex py-20"
-        >
-            <ButtonHero
-            bgClass="bg-primary"
-            />
-        </NuxtLink>
-        <NuxtLink
-            to="/downloads/whitepaper"
-            class="items-center justify-center flex py-20"
-        >
-            <ButtonBaseButton
-                sizeClass="lg"
-                bgClass="bg-none"
-                textClass="text-primary"
-                borderClass="border border-primary"
-            >
-                Whitepaper
-            </ButtonBaseButton>
-        </NuxtLink>
-      </div>
-    </section>
-  </template>
-  
+      <NuxtLink
+        href="#"
+        class="inline-block mt-6 text-primary relative font-medium text-lg group"
+      >
+        Try expentura for Free →
+        <span
+          class="absolute left-0 bottom-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"
+        ></span>
+      </NuxtLink>
+    </div>
 
-<style scoped lang="scss">
+    <!-- KPI Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6" data-aos="fade-right">
+      <div
+        v-for="(kpi, index) in kpis"
+        :key="index"
+        class="flex flex-col items-center bg-primary text-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+      >
+        <font-awesome
+          :icon="['fas', kpi.icon]"
+          class="text-4xl text-secondary opacity-80 mb-4"
+        />
+        <p >{{ kpi.value }}</p>
+      </div>
+    </div>
+  </section>
+</template>
 
+<style scoped>
+.text-primary {
+  color: #004e3f; /* Matches the button's text color from the image */
+}
+.bg-primary {
+  background-color: #011e1b; /* Matches the dark green from the image */
+}
 </style>
+

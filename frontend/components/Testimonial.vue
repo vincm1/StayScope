@@ -53,8 +53,8 @@ const updateTestimonialContent = (company: string) => {
 </script>
 
 <template>
-    <section class="bg-white">
-      <div class="container mx-auto pb-20">
+    <section class="bg-white pt-10">
+      <div class="container mx-auto" data-aos="fade-up">
         <h2 class="text-center text-1xl text-grey text-playfair mb-5">What our Partners say</h2>
         <h1 class="text-4xl text-center text-primary font-bold">
           Experience Economy
@@ -63,7 +63,7 @@ const updateTestimonialContent = (company: string) => {
         <p class="text-center text-lg lg:text-xl text-primary my-3 leading-relaxed">
           Over 50 partners have joined us to create a seamless experience for their guests.
         </p>
-        <div class="card mt-10 mx-20 bg-beige p-10 rounded-lg shadow-lg">
+        <div class="card mt-10 mx-20 bg-beige py-5 rounded-lg shadow-lg">
           <h1 class="text-4xl text-primary font-bold ml-20">
             {{selectedCompany.header}}
           </h1>
@@ -93,6 +93,31 @@ const updateTestimonialContent = (company: string) => {
               <li><NuxtImg src="/images/clients/caudile.svg" @click="updateTestimonialContent('caudile')" class="h-5 cursor-pointer"></NuxtImg></li>
             </ul>
           </div>
+        </div>
+        
+        <div class="flex justify-center gap-6">
+          <NuxtLink
+          to="#book-demo"
+          class="items-center justify-center flex py-20"
+          >
+              <ButtonHero
+              sizeClass="lg"
+              bgClass="bg-primary"
+              />
+          </NuxtLink>
+          <NuxtLink
+              to="/downloads/whitepaper"
+              class="items-center justify-center flex py-20"
+          >
+              <ButtonBaseButton
+                  sizeClass="lg"
+                  bgClass="bg-none"
+                  textClass="text-primary"
+                  borderClass="border border-primary"
+              >
+                  Whitepaper
+              </ButtonBaseButton>
+          </NuxtLink>
         </div>
       </div>
     </section>

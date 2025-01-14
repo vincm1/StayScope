@@ -65,14 +65,6 @@
         </div>
       </div>
     </div>
-
-
-    <!-- Call to Action -->
-    <div class="flex justify-center space-x-4 mt-10 mb-6">
-        <NuxtLink to="#book-demo">
-            <ButtonHero />
-        </NuxtLink>
-    </div>
   </section>
 </template>
 

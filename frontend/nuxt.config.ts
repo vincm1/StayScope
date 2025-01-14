@@ -23,6 +23,7 @@ export default defineNuxtConfig({
         'faHeart',
         'faUtensils',
         'faQuoteLeft',
+        'faPaperPlane'
       ],
       regular: [
         'faLightbulb',

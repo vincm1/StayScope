@@ -5,7 +5,10 @@
     <LandingHero />
     <LandingProblem />
     <LandingSoftware />
+    <Testimonial />
+    <Kpis />
     <LandingSteps />
+    <Cta />
 </template>
 
 <style scoped lang="scss">

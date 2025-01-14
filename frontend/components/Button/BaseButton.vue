@@ -25,7 +25,7 @@ defineProps({
     required: false,
     default: 'md',
     validator: (value: string) => {
-      return ['sm', 'md', 'lg'].includes(value);
+      return ['sm', 'md', 'lg', 'xl'].includes(value);
     },
   },
   hoverEnabled: {

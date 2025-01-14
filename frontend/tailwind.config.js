@@ -14,6 +14,7 @@ export default {
         inter: ["'Inter', sans-serif"],
         jakarta_sans: ["'Plus Jakarta Sans', sans-serif"],
         playfair: ["'Playfair Display', serif"],
+        montserrat: ["'Montserrat', sans-serif"],
       },
       colors: {
         primary: 'rgb(16, 45, 33)',
