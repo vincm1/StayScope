@@ -9,162 +9,161 @@
 </script>
 
 <template>
-  <section class="kpis bg-white px-4 py-10">
-    <!-- Heading -->
-    <div class="container-sm text-center mx-auto py-5" data-aos="fade-up">
+  <section class="kpis bg-white text-primary px-4 py-6 mx-auto">
+    <div class="container text-center mx-auto py-5" data-aos="fade-up">
+      <!-- Heading -->
       <h1 class="text-1xl text-grey text-playfair mb-5">OUR NUMBERS</h1>
-      <div>
-        <p class="text-primary text-2xl md:text-4xl font-bold my-3">
-          Ready to unlock your hotel’s potential?
-        </p>
-        <p class="text-lg text-gray-600 mt-8 mx-10">
-          expentura drives hotel growth with higher RevPAR, guest satisfaction, and direct bookings for lasting success.
-        </p>
+      <h1 class="text-2xl md:text-4xl font-bold mt-3">
+        Ready to unlock your hotel’s potential?
+      </h1>
+      <!-- Subheading -->
+      <p class="text-lg text-gray-600 mt-8 mx-10">
+        expentura drives hotel growth with higher RevPAR, guest satisfaction, and direct bookings for lasting success.
+      </p>
+
+      <!-- KPI Cards -->
+      <div class="mx-4 my-4 hover:text-primary">
+        <!-- First Row -->
+        <div class="grid grid-cols-1 lg:grid-cols-8 gap-2 mt-8 mb-2" data-aos="fade-right">
+          <!-- Card 1: 80% Width -->
+          <div class="lg:col-span-5 card-hover border-2 border-secondary bg-primary text-white p-6 rounded-xl shadow-lg transition-shadow">
+            <!-- KPI Label -->
+            <h1 class="text-md text-secondary text-playfair mb-5">
+              {{ kpis[0].label.toUpperCase() }}
+            </h1>
+
+            <!-- Icon and KPI Value Container -->
+            <div class="flex items-center space-x-4">
+              <!-- Icon with Fully Rounded Background -->
+              <div class="flex items-center justify-center bg-secondary w-16 h-16 rounded-full">
+                <font-awesome
+                  :icon="['fas', kpis[0].icon]"
+                  class="text-4xl text-primary"
+                />
+              </div>
+              <div>
+                <h3 class="text-4xl font-bold">{{ kpis[0].value }}</h3>
+              </div>
+            </div>
+            <p class="text-lg text-beige pt-8">
+              {{ kpis[0].description }}
+            </p>
+          </div>
+
+          <!-- Card 2: 20% Width -->
+          <div class="lg:col-span-3 card-hover border-2 border-secondary bg-primary text-white p-6 rounded-xl shadow-lg transition-shadow">
+            <!-- KPI Label -->
+            <h1 class="text-md text-secondary text-playfair mb-5">
+              {{ kpis[1].label.toUpperCase() }}
+            </h1>
+
+            <!-- Icon and KPI Value Container -->
+            <div class="flex items-center space-x-4">
+              <!-- Icon with Fully Rounded Background -->
+              <div class="flex items-center justify-center bg-secondary w-16 h-16 rounded-full">
+                <font-awesome
+                  :icon="['fas', kpis[1].icon]"
+                  class="text-4xl text-primary"
+                />
+              </div>
+              <div>
+                <h3 class="text-4xl font-bold">{{ kpis[1].value }}</h3>
+              </div>
+            </div>
+            <p class="text-lg text-beige pt-8">
+              {{ kpis[1].description }}
+            </p>
+          </div>
+        </div>
+        <!-- Second Row -->
+        <div class="grid grid-cols-1 lg:grid-cols-10 gap-6 mt-5" data-aos="fade-right">
+          <!-- Card 3 -->
+          <div class="card-hover lg:col-span-3 border-2 border-secondary bg-primary text-white p-6 rounded-lg shadow-lg transition-shadow">
+            <!-- KPI Label -->
+            <h1 class="text-md text-secondary text-playfair mb-5">
+              {{ kpis[2].label.toUpperCase() }}
+            </h1>
+
+            <!-- Icon and KPI Value Container -->
+            <div class="flex items-center space-x-4">
+              <!-- Icon with Fully Rounded Background -->
+              <div class="flex items-center justify-center bg-secondary w-16 h-16 rounded-full">
+                <font-awesome
+                  :icon="['fas', kpis[2].icon]"
+                  class="text-4xl text-primary"
+                />
+              </div>
+              <div>
+                <h3 class="text-4xl font-bold">{{ kpis[2].value }}</h3>
+              </div>
+            </div>
+            <p class="text-lg text-beige pt-8">
+              {{ kpis[2].description }}
+            </p>
+          </div>
+          <!-- Card 4 -->
+          <div class="card-hover lg:col-span-3 border-2 border-secondary bg-primary text-white p-6 rounded-lg shadow-lg transition-shadow">
+            <!-- KPI Label -->
+            <h1 class="text-md text-secondary text-playfair mb-5">
+              {{ kpis[3].label.toUpperCase() }}
+            </h1>
+
+            <!-- Icon and KPI Value Container -->
+            <div class="flex items-center space-x-4">
+              <!-- Icon with Fully Rounded Background -->
+              <div class="flex items-center justify-center bg-secondary w-16 h-16 rounded-full">
+                <font-awesome
+                  :icon="['fas', kpis[3].icon]"
+                  class="text-4xl text-primary"
+                />
+              </div>
+              <div>
+                <h3 class="text-4xl font-bold">{{ kpis[3].value }}</h3>
+              </div>
+            </div>
+            <p class="text-lg text-beige pt-8">
+              {{ kpis[3].description }}
+            </p>
+          </div>
+          <!-- Card 5 -->
+          <div class="card-hover lg:col-span-4 border-2 border-secondary bg-primary text-white p-6 rounded-lg shadow-lg transition-shadow">
+            <!-- KPI Label -->
+            <h1 class="text-md text-secondary text-playfair mb-5">
+              {{ kpis[4].label.toUpperCase() }}
+            </h1>
+
+            <!-- Icon and KPI Value Container -->
+            <div class="flex items-center space-x-4">
+              <!-- Icon with Fully Rounded Background -->
+              <div class="flex items-center justify-center bg-secondary w-16 h-16 rounded-full">
+                <font-awesome
+                  :icon="['fas', kpis[4].icon]"
+                  class="text-4xl text-primary"
+                />
+              </div>
+              <div>
+                <h3 class="text-4xl font-bold">{{ kpis[4].value }}</h3>
+              </div>
+            </div>
+            <p class="text-lg text-beige pt-8">
+              {{ kpis[4].description }}
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- CTA Button -->
+      <div class="flex justify-center">
         <NuxtLink
-          href="#"
-          class="inline-block mt-6 text-primary relative font-medium text-lg group"
-        >
-          Try expentura for Free →
-          <span
-            class="absolute left-0 bottom-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"
-          ></span>
-        </NuxtLink>
+            href="#"
+            class="inline-block mt-6 text-primary relative font-medium text-lg group"
+          >
+            Try expentura for Free →
+            <span
+              class="absolute left-0 bottom-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"
+            ></span>
+          </NuxtLink>
       </div>
     </div>
-
-    <!-- KPI Cards -->
-    <div class="mx-4 my-4 hover:text-primary">
-
-      <!-- First Row -->
-      <div class="grid grid-cols-1 lg:grid-cols-8 gap-2 my-3" data-aos="fade-right">
-        <!-- Card 1: 80% Width -->
-        <div class="lg:col-span-5 card-hover border-2 border-secondary bg-primary text-white p-6 rounded-xl shadow-lg transition-shadow">
-          <!-- KPI Label -->
-          <h1 class="text-md text-secondary text-playfair mb-5">
-            {{ kpis[0].label.toUpperCase() }}
-          </h1>
-
-          <!-- Icon and KPI Value Container -->
-          <div class="flex items-center space-x-4">
-            <!-- Icon with Fully Rounded Background -->
-            <div class="flex items-center justify-center bg-secondary w-16 h-16 rounded-full">
-              <font-awesome
-                :icon="['fas', kpis[0].icon]"
-                class="text-4xl text-primary"
-              />
-            </div>
-            <div>
-              <h3 class="text-4xl font-bold">{{ kpis[0].value }}</h3>
-            </div>
-          </div>
-          <p class="text-lg text-beige pt-8">
-            {{ kpis[0].description }}
-          </p>
-        </div>
-
-        <!-- Card 2: 20% Width -->
-        <div class="lg:col-span-3 card-hover border-2 border-secondary bg-primary text-white p-6 rounded-xl shadow-lg transition-shadow">
-          <!-- KPI Label -->
-          <h1 class="text-md text-secondary text-playfair mb-5">
-            {{ kpis[1].label.toUpperCase() }}
-          </h1>
-
-          <!-- Icon and KPI Value Container -->
-          <div class="flex items-center space-x-4">
-            <!-- Icon with Fully Rounded Background -->
-            <div class="flex items-center justify-center bg-secondary w-16 h-16 rounded-full">
-              <font-awesome
-                :icon="['fas', kpis[1].icon]"
-                class="text-4xl text-primary"
-              />
-            </div>
-            <div>
-              <h3 class="text-4xl font-bold">{{ kpis[1].value }}</h3>
-            </div>
-          </div>
-          <p class="text-lg text-beige pt-8">
-            {{ kpis[1].description }}
-          </p>
-        </div>
-      </div>
-
-      <!-- Second Row -->
-      <div class="grid grid-cols-1 lg:grid-cols-10 gap-6" data-aos="fade-right">
-        <!-- Card 3 -->
-        <div class="card-hover lg:col-span-3 border-2 border-secondary bg-primary text-white p-6 rounded-lg shadow-lg transition-shadow">
-          <!-- KPI Label -->
-          <h1 class="text-md text-secondary text-playfair mb-5">
-            {{ kpis[2].label.toUpperCase() }}
-          </h1>
-
-          <!-- Icon and KPI Value Container -->
-          <div class="flex items-center space-x-4">
-            <!-- Icon with Fully Rounded Background -->
-            <div class="flex items-center justify-center bg-secondary w-16 h-16 rounded-full">
-              <font-awesome
-                :icon="['fas', kpis[2].icon]"
-                class="text-4xl text-primary"
-              />
-            </div>
-            <div>
-              <h3 class="text-4xl font-bold">{{ kpis[2].value }}</h3>
-            </div>
-          </div>
-          <p class="text-lg text-beige pt-8">
-            {{ kpis[2].description }}
-          </p>
-        </div>
-        <!-- Card 4 -->
-        <div class="card-hover lg:col-span-3 border-2 border-secondary bg-primary text-white p-6 rounded-lg shadow-lg transition-shadow">
-          <!-- KPI Label -->
-          <h1 class="text-md text-secondary text-playfair mb-5">
-            {{ kpis[3].label.toUpperCase() }}
-          </h1>
-
-          <!-- Icon and KPI Value Container -->
-          <div class="flex items-center space-x-4">
-            <!-- Icon with Fully Rounded Background -->
-            <div class="flex items-center justify-center bg-secondary w-16 h-16 rounded-full">
-              <font-awesome
-                :icon="['fas', kpis[3].icon]"
-                class="text-4xl text-primary"
-              />
-            </div>
-            <div>
-              <h3 class="text-4xl font-bold">{{ kpis[3].value }}</h3>
-            </div>
-          </div>
-          <p class="text-lg text-beige pt-8">
-            {{ kpis[3].description }}
-          </p>
-        </div>
-        <!-- Card 5 -->
-        <div class="card-hover lg:col-span-4 border-2 border-secondary bg-primary text-white p-6 rounded-lg shadow-lg transition-shadow">
-          <!-- KPI Label -->
-          <h1 class="text-md text-secondary text-playfair mb-5">
-            {{ kpis[4].label.toUpperCase() }}
-          </h1>
-
-          <!-- Icon and KPI Value Container -->
-          <div class="flex items-center space-x-4">
-            <!-- Icon with Fully Rounded Background -->
-            <div class="flex items-center justify-center bg-secondary w-16 h-16 rounded-full">
-              <font-awesome
-                :icon="['fas', kpis[4].icon]"
-                class="text-4xl text-primary"
-              />
-            </div>
-            <div>
-              <h3 class="text-4xl font-bold">{{ kpis[4].value }}</h3>
-            </div>
-          </div>
-          <p class="text-lg text-beige pt-8">
-            {{ kpis[4].description }}
-          </p>
-        </div>
-      </div>
-
-      </div>
   </section>
 </template>
 

@@ -10,22 +10,26 @@ const keywords =
 </script>
 
 <template>
-  <section class="problem bg-white text-primary px-4 py-10">
-    <div class="text-center mx-auto py-5" data-aos="fade-up">
+  <section class="problem bg-white text-primary px-4 py-6 mx-auto">
+    <div class="container text-center py-5" data-aos="fade-up">
       <!-- Heading -->
       <h1 class="text-1xl text-grey text-playfair mb-5">PROBLEM</h1>
-
-      <!-- Problem Statement -->
-      <div>
-        <p class="text-2xl md:text-4xl font-bold my-3">Guests require curated and personalized experiences</p>
-        <p class="text-xl md:text-2xl mx-5 md:mx-20 my-8">
-          Create a seemless experience for your guests by providing them with curated and personalized experiences
-        </p>
-        <NuxtLink to="/signup" class="pt-5 hover:underline transition">
-          Try expentura for free
-          <font-awesome class="arrow-icon pl-2" :icon="['fas', 'arrow-right']" />
-        </NuxtLink>
-      </div>
+      <h1 class="text-2xl md:text-4xl font-bold mt-3">
+        Guests require curated and personalized experiences
+      </h1>
+      <!-- Subheading -->
+      <p class="text-xl md:text-2xl mx-5 md:mx-20 my-8">
+        Create a seemless experience for your guests by providing them with curated and personalized experiences.
+      </p>
+      <NuxtLink
+        href="#"
+        class="inline-block mt-6 text-primary relative font-medium text-lg group"
+      >
+        Try expentura for Free →
+        <span
+          class="absolute left-0 bottom-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"
+        ></span>
+      </NuxtLink>
 
       <!-- Continuous Scrolling Keywords -->
       <div class="keywords-container my-10 mx-auto">

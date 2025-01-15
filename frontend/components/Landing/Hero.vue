@@ -1,10 +1,6 @@
 <template>
   <div class="LandingHero flex items-center justify-center">
-    <div class="hero-body font-init mt-8 rounded-lg">
-      <Info
-        title="Become a Betatester for our new product!"
-        class="px-10"
-      />
+    <div class="hero-body font-init mt-5 rounded-lg">
       <div class="text-center text-beige">
         <!-- Headline -->
         <h1 class="title text-2xl md:text-4xl font-bold leading-relaxed mt-10 mb-6">
@@ -12,7 +8,7 @@
           through your hotel website
         </h1>
         <!-- Subtitle -->
-        <p class="subtitle font-beige leading-loose mb-6">
+        <p class="subtitle font-beige leading-loose my-6">
           An all-in-one platform that helps hotels easily manage and promote <br />
           in-destination activities, excursions, and guest experiences.
         </p>

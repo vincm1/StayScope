@@ -38,7 +38,7 @@ const toggleSidebar = () => {
         <ButtonBaseButton
             :bgClass="isScrolled ? 'bg-secondary' : 'bg-primary'"
             :textClass="isScrolled ? 'text-primary' : 'text-secondary'"
-            
+            class="font-semibold"
           >Book Demo
         </ButtonBaseButton>
       </NuxtLink>
