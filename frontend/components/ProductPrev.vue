@@ -1,4 +1,27 @@
-<script lang="ts">
+<script setup lang="ts">
+const preloadImages = async (srcArray: string[]) => {
+  const promises = srcArray.map((src) => {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = () => resolve(src);
+      img.onerror = () => reject(src);
+    });
+  });
+
+  try {
+    await Promise.all(promises);
+    console.log("All images preloaded successfully");
+  } catch (err) {
+    console.error("Error preloading images:", err);
+  }
+};
+onMounted(async () => {
+  await preloadImages([
+    '/images/productprev/futura_landing_(desktop).svg',
+    '/images/productprev/expentura_experience_checkout_(desktop).svg',
+  ]);
+});
 </script>
 
 <template>

@@ -6,6 +6,34 @@
     { value: "30%", label: "Stay duration", description: "Guests are extending their stays when having personalized experiences", icon: 'arrow-up'},
     { value: "9%", label: "Total Revpar", description: "Boost your Total Revenue per Available Room by 8% with higher guest spending, extended stays, and improved satisfaction.", icon: 'arrow-up' },
     ];
+
+    const targetElement = ref<HTMLElement | null>(null); // Reference to the target component
+    const showModal = ref(false); // Reactive state to control modal visibility
+
+    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          showModal.value = true; // Open the modal when the target is in view
+        }
+      });
+    };
+
+    onMounted(() => {
+      const observer = new IntersectionObserver(handleIntersection, {
+        threshold: 0.1, // Trigger when 10% of the component is visible
+      });
+      if (targetElement.value) {
+        observer.observe(targetElement.value);
+      }
+    });
+
+    onUnmounted(() => {
+      if (targetElement.value) {
+        const observer = new IntersectionObserver(handleIntersection);
+        observer.disconnect();
+      }
+    });
+
 </script>
 
 <template>
@@ -154,14 +182,14 @@
       <!-- CTA Button -->
       <div class="flex justify-center">
         <NuxtLink
-            href="#"
-            class="inline-block mt-6 text-primary relative font-medium text-lg group"
-          >
+          href="#"
+          class="inline-block mt-6 text-primary relative font-medium text-lg group"
+        >
             Try expentura for Free →
-            <span
-              class="absolute left-0 bottom-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"
-            ></span>
-          </NuxtLink>
+          <span
+            class="absolute left-0 bottom-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"
+          ></span>
+        </NuxtLink>
       </div>
     </div>
   </section>

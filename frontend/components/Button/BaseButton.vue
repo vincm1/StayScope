@@ -20,14 +20,6 @@ defineProps({
     required: false,
     default: 'text-white',
   },
-  size: {
-    type: String,
-    required: false,
-    default: 'md',
-    validator: (value: string) => {
-      return ['sm', 'md', 'lg', 'xl'].includes(value);
-    },
-  },
   hoverEnabled: {
     type: Boolean,
     required: false,
@@ -83,4 +75,5 @@ button {
     outline: none;
   }
 }
+
 </style>

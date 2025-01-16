@@ -9,6 +9,7 @@
     <Kpis />
     <LandingSteps />
     <Cta />
+    <Whitepaper />
 </template>
 
 <style scoped lang="scss">

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const options = {
-        url: 'https://calendly.com/vincent-michler94/30min',   
+        url: 'https://calendly.com/vincent-expentura/30min',   
     };
 </script>
 

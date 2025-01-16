@@ -24,7 +24,7 @@ const keywords =
         curated and personalized experiences.
       </p>
       <NuxtLink
-        href="#"
+        href="#book-demo"
         class="inline-block mt-2 text-primary relative font-medium text-lg group"
       >
         Try expentura for Free →
