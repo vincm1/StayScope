@@ -5,9 +5,9 @@ const options = {
 </script>
 
 <template>
-  <section class="bg-lightbeige text-primary px-4 py-10 mx-auto">
+  <section class="demo bg-lightbeige text-primary px-4 py-10 mx-auto">
     <!-- Header Section -->
-    <div class="container text-center py-5" data-aos="fade-up">
+    <div class="text-center py-5" data-aos="fade-up">
       <h1 class="text-1xl text-grey text-playfair mb-5">GET TO KNOW THE PLATFORM TODAY</h1>
       <h1 class="text-2xl md:text-4xl font-bold mt-3">Start selling experiences in under an hour</h1>
       <p class="text-xl md:text-2xl mx-5 md:mx-20 my-8">
@@ -52,7 +52,7 @@ const options = {
           </div>
       </div>
 
-      <div id="book-demo">
+      <div class="mt-6 md:mt-1" id="book-demo">
         <CalendlyInlineWidget v-bind="options" />
       </div>
     </div>

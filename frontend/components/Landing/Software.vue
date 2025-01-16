@@ -1,8 +1,8 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section class="software bg-white text-primary px-4 py-6 mx-auto">
-    <div class="container text-center pb-5" data-aos="fade-up">
+  <section class="software bg-white text-center text-primary px-4 pt-20 pb-10 mx-auto">
+    <div class="pb-5" data-aos="fade-up">
         <!-- Heading -->
         <h1 class="text-1xl text-grey text-playfair mb-5">
           HOSPITALITY FUTURE
@@ -16,7 +16,7 @@
         </p>
     </div>
 
-    <div class="container product-demo mx-auto px-5">
+    <div class="product-demo mx-auto px-5">
       <!-- Grid Layout -->
       <div class="grid grid-cols-1 gap-20">
         <!-- Row 1 -->

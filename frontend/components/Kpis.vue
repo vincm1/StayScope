@@ -22,7 +22,7 @@
       </p>
 
       <!-- KPI Cards -->
-      <div class="mx-4 my-4 hover:text-primary">
+      <div class="mx-4 my-4 text-start hover:text-primary">
         <!-- First Row -->
         <div class="grid grid-cols-1 lg:grid-cols-8 gap-2 mt-8 mb-2" data-aos="fade-right">
           <!-- Card 1: 80% Width -->

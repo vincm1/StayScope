@@ -36,7 +36,7 @@ const startAutoRotate = (): void => {
   interval = setInterval(() => {
     index = (index + 1) % testimonials.length; // Cycle through testimonials
     selectedCompany.value = testimonials[index];
-  }, 10000); // Change every 10 seconds
+  }, 30000); // Change every 30 seconds
 };
 
 const stopAutoRotate = (): void => {
@@ -62,102 +62,106 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <section class="testimonial bg-white text-primary px-4 py-6 mx-auto">
-      <div class="container text-center py-5" data-aos="fade-up">
-        <!-- Heading -->
-        <h1 class="text-1xl text-grey text-playfair mb-5">WHAT OUR PARTNERS SAY</h1>
-        <h1 class="text-2xl md:text-4xl font-bold mt-3">
-          Join the Experience Economy
-        </h1>
-        <!-- Subheading -->
-        <p class="text-xl md:text-2xl mx-5 md:mx-20 my-8">
-          Over 20 partners have joined us to create a seamless experience for their guests.
-        </p>
+  <section class="testimonial bg-white text-primary px-4 py-6 mx-auto">
+    <div class="text-center py-5" data-aos="fade-up">
+      <!-- Heading -->
+      <h1 class="text-1xl text-grey text-playfair mb-5">WHAT OUR PARTNERS SAY</h1>
+      <h1 class="text-2xl md:text-4xl font-bold mt-3">
+        Join the Experience Economy
+      </h1>
+      <!-- Subheading -->
+      <p class="text-xl md:text-2xl mx-5 md:mx-20 my-8">
+        Over 20 partners have joined us to create a seamless experience for their guests.
+      </p>
 
-        <!-- Testimonial Card -->
-        <div class="card mt-10 mx-20 bg-beige px-5 py-8 rounded-xl shadow-xl">
-          <h1 class="text-2xl text-center text-primary font-jakarta_sans font-bold pt-4">
-            {{selectedCompany.header}}
-          </h1>
-          <div class="flex text-center items-center pt-5 mx-20">
-            <p class="text-md text-primary flex justify-center items-center pr-10">
-              {{ selectedCompany.text }}
-            </p>
-            <font-awesome 
-                :icon="['fas', 'quote-left']" 
-                class="text-5xl text-primary bg-secondary p-5 rounded-full" 
-            />
-          </div>
-          <div class="flex items-center justify-between mt-10 mx-5">
-          <!-- Left Section: Picture and Text -->
-          <div class="flex items-center space-x-4 mx-10">
-            <img
-              class="w-12 h-12 rounded-full ring-2 ring-primary"
-              :src="selectedCompany.picture"
-              alt="Testimonial Image"
-            />
-            <div>
-              <h2 class="text-lg font-semibold">{{ selectedCompany.ceo }}</h2>
-              <p class="text-sm">{{ selectedCompany.position }}</p>
+      <!-- Testimonial Card -->
+      <div class="flex justify-center">
+        <div class="card text-center w-full lg:w-3/4 2xl:w-1/2 bg-beige rounded-xl shadow-xl p-8 2xl:p-12 relative">
+          <span class="hidden md:block">
+            <div class="bg-primary absolute top-3 right-4 rounded-full m-1 p-1">
+            <font-awesome
+              :icon="['fas', 'quote-left']"
+              class="text-secondary text-4xl 
+                    justify-center p-2 rounded-full"
+              />
             </div>
-          </div>
+          </span>
+          <h1 class="text-2xl text-primary font-jakarta_sans font-bold pt-2">
+            {{ selectedCompany.header }}
+          </h1>
+          <p class="text-md text-primary pt-4">
+            {{ selectedCompany.text }}
+          </p>
+          <div class="flex flex-col md:flex-row justify-between items-center mt-10">
+            <!-- Left Section: Picture and Text -->
+            <div class="flex items-center space-x-4 mb-10 md:mb-0">
+              <img
+                class="w-12 h-12 rounded-full ring-2 ring-primary"
+                :src="selectedCompany.picture"
+                alt="Testimonial Image"
+              />
+              <div class="text-left">
+                <h2 class="text-lg font-semibold">{{ selectedCompany.ceo }}</h2>
+                <p class="text-sm">{{ selectedCompany.position }}</p>
+              </div>
+            </div>
 
-          <!-- Right Section: Clickable List -->
-          <ul class="flex space-x-6 mx-10">
-            <li>
-              <NuxtImg
-                src="/images/clients/infinity.svg"
-                @click="updateTestimonialContent('infiniti')"
-                class="h-5 cursor-pointer"
-              />
-            </li>
-            <li>
-              <NuxtImg
-                src="/images/clients/mfinity.svg"
-                @click="updateTestimonialContent('mfinity')"
-                class="h-5 cursor-pointer"
-              />
-            </li>
-            <li>
-              <NuxtImg
-                src="/images/clients/caudile.svg"
+            <!-- Right Section: Clickable List -->
+            <ul class="flex space-x-6">
+              <li>
+                <NuxtImg
+                  src="/images/clients/infinity.svg"
+                  @click="updateTestimonialContent('infiniti')"
+                  class="h-5 cursor-pointer"
+                />
+              </li>
+              <li>
+                <NuxtImg
+                  src="/images/clients/mfinity.svg"
+                  @click="updateTestimonialContent('mfinity')"
+                  class="h-5 cursor-pointer"
+                />
+              </li>
+              <li>
+                <NuxtImg
+                  src="/images/clients/caudile.svg"
                   @click="updateTestimonialContent('caudile')"
                   class="h-5 cursor-pointer"
                 />
               </li>
-          </ul>
+            </ul>
           </div>
         </div>
-        
-        <!-- Call to Action Buttons -->
-        <div class="flex justify-center gap-6 pt-10">
-          <NuxtLink
+      </div>
+
+      <!-- Call to Action Buttons -->
+      <div class="flex justify-center gap-6 pt-10">
+        <NuxtLink
           to="#book-demo"
           class="items-center justify-center flex"
+        >
+          <ButtonHero
+            sizeClass="lg"
+            bgClass="bg-primary"
+          />
+        </NuxtLink>
+        <NuxtLink
+          to="/downloads/whitepaper"
+          class="items-center justify-center flex"
+        >
+          <ButtonBaseButton
+            sizeClass="lg"
+            bgClass="bg-none"
+            textClass="text-primary"
+            borderClass="border border-primary"
           >
-              <ButtonHero
-              sizeClass="lg"
-              bgClass="bg-primary"
-              />
-          </NuxtLink>
-          <NuxtLink
-              to="/downloads/whitepaper"
-              class="items-center justify-center flex"
-          >
-              <ButtonBaseButton
-                  sizeClass="lg"
-                  bgClass="bg-none"
-                  textClass="text-primary"
-                  borderClass="border border-primary"
-              >
-                  Whitepaper
-              </ButtonBaseButton>
-          </NuxtLink>
-        </div>
-      
+            Whitepaper
+          </ButtonBaseButton>
+        </NuxtLink>
       </div>
-    </section>
-  </template>
+    </div>
+  </section>
+</template>
 
 <style scoped lang="scss">
 </style>

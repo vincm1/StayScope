@@ -2,15 +2,16 @@
 const keywords = 
     [
         "Experiences",
-        "UP-Selling",
+        "Up-Selling",
         "Guest experience",
         "Personalization",
         "Cross-Selling",
+        "Revenue growth"
     ]
 </script>
 
 <template>
-  <section class="problem bg-white text-primary px-4 py-6 mx-auto">
+  <section class="problem flex justify-center items-center bg-white text-primary px-4 pt-5 pb-10 mx-auto">
     <div class="container text-center py-5" data-aos="fade-up">
       <!-- Heading -->
       <h1 class="text-1xl text-grey text-playfair mb-5">PROBLEM</h1>
@@ -19,40 +20,44 @@ const keywords =
       </h1>
       <!-- Subheading -->
       <p class="text-xl md:text-2xl mx-5 md:mx-20 my-8">
-        Create a seemless experience for your guests by providing them with curated and personalized experiences.
+        Create a seemless experience for your guests by providing them with <span class="hidden lg:inline"><br></span>
+        curated and personalized experiences.
       </p>
       <NuxtLink
         href="#"
-        class="inline-block mt-6 text-primary relative font-medium text-lg group"
+        class="inline-block mt-2 text-primary relative font-medium text-lg group"
       >
         Try expentura for Free →
         <span
           class="absolute left-0 bottom-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"
         ></span>
       </NuxtLink>
-
-      <!-- Continuous Scrolling Keywords -->
-      <div class="keywords-container my-10 mx-auto">
-        <NuxtMarquee :speed="50" class="flex items-center">
+    </div>
+  </section>
+  <!-- Continuous Scrolling Keywords -->
+  <div class="keywords-container bg-white container-fluid">
+      <NuxtMarquee :speed="50" class="flex items-center">
           <div
             v-for="(word, index) in keywords"
             :key="index"
             class="flex items-center justify-center"
           >
             <div
-              class="keyword-box w-48 h-12 flex items-center justify-center border border-gray-300 rounded-full text-sm font-semibold text-center"
+              class="keyword-box w-48 h-12 flex items-center justify-center border border-primary rounded-full text-md font-semibold 10 text-center"
             >
               {{ word }}
             </div>
-            <font-awesome
+            <div class="bg-primary rounded-full mx-3">
+              <font-awesome
               :icon="['fas', 'circle-exclamation']"
-              class="exclamation-icon w-12 h-10 flex items-center justify-center mx-2 rounded-full"
-            />
+              class="text-secondary exclamation-icon w-10 h-10 flex items-center
+                    justify-center p-2 rounded-full"
+              />
+            </div>
+            
           </div>
-        </NuxtMarquee>
-      </div>
+      </NuxtMarquee>
     </div>
-  </section>
 </template>
   
 <style scoped lang="scss">
