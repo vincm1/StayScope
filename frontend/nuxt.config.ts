@@ -2,11 +2,26 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-
   alias: {
     assets: '/<rootDir>/assets',
   },
-  modules: ['@vesp/nuxt-fontawesome', '@vueuse/nuxt', '@primevue/nuxt-module', '@nuxt/image' ,'nuxt-marquee', 'nuxt-aos', 'nuxt-calendly', '@nuxt/image'],
+  modules: [
+    '@vesp/nuxt-fontawesome',
+    '@vueuse/nuxt',
+    '@primevue/nuxt-module',
+    '@nuxt/image',
+    'nuxt-marquee',
+    'nuxt-aos',
+    'nuxt-calendly',
+    '@nuxt/image',
+  ],
+  runtimeConfig: {
+      MAILHOST: process.env.MAILHOST,
+      MAILPORT: process.env.MAILPORT,
+      MAILUSER: process.env.MAILUSER,
+      MAILPASSWORD: process.env.MAILPASSWORD,
+      CONTACTMAIL: process.env.CONTACTMAIL,
+  },
   css: ['~/assets/scss/main.scss'],
   fontawesome: {
     icons: {
@@ -40,6 +55,28 @@ export default defineNuxtConfig({
       tailwindcss: {},
       autoprefixer: {},
     },
+  },
+  primevue: {
+    options: {
+      theme: {
+      },
+    },
+  },
+  mail: {
+    message: {
+      to: process.env.NUXT_MAIL_TARGET,
+    },
+    smtp: {
+      host: process.env.NUXT_MAIL_SMTP, // Replace with your SMTP host
+      port: process.env.NUXT_MAIL_PORT, // Use the correct port: 587 for STARTTLS or 465 for SSL
+      secure: true, // Set to true for SSL, false for STARTTLS
+      auth: {
+        user: process.env.NUXT_MAIL_USERNAME, // Your SMTP username (full email)
+        pass: process.env.NUXT_MAIL_PASSWORD, // Use environment variable for security
+      },
+    },
+    logger: true, // Enable logging to the console
+    debug: true, // Enable debugging
   },
   aos: {
     // Global settings:
@@ -84,4 +121,4 @@ export default defineNuxtConfig({
      */
     loadWidgetCloseIconSvg: true
   },
-})
+});
