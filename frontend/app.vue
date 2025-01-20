@@ -2,7 +2,6 @@
 </script>
 
 <template>
-    <Analytics />
     <NuxtLayout >
       <Navbar />
       <NuxtPage />
