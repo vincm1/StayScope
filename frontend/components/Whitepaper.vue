@@ -60,6 +60,7 @@ const handleSubmit = async () => {
     return; // Exit if validation fails
   }
 
+  console.log(`${apiBaseUrl}/api/contact`);
   waiting.value = true;
   downloadButtonState.value = 'loading';
 
@@ -84,7 +85,7 @@ const handleSubmit = async () => {
       setTimeout(() => {
         closeModal();
         downloadButtonState.value = 'default'; // Reset button state after modal closes
-      }, 3000);
+      }, 1000);
 
     } else {
       throw new Error('Unexpected response');
