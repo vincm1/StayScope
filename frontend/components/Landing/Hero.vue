@@ -1,5 +1,5 @@
 <template>
-  <div class="LandingHero flex items-center justify-center">
+  <div class="LandingHero flex items-center justify-center" id="hero">
     <div class="hero-body font-init mt-5 rounded-lg">
       <div class="text-center text-beige">
         <!-- Headline -->

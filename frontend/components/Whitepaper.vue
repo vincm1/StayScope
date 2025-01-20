@@ -43,7 +43,7 @@ onUnmounted(() => {
 const formData = ref({
   firstname: '',
   lastname: '',
-  company: '',
+  hotelname: '',
   numhotels: sliderValue.value, // Ensure sliderValue is defined or passed correctly
   email: '',
 });
@@ -68,7 +68,7 @@ async function handleSubmit() {
     formData.value = {
       firstname: '',
       lastname: '',
-      company: '',
+      hotelname: '',
       numhotels: sliderValue.value,
       email: '',
     };
@@ -133,7 +133,7 @@ async function handleSubmit() {
                 <label for="hotelname">Hotel- / Company name</label>
                 <InputText unstyled="true" placeholder="Alpenglück" 
                     class="w-full py-2 pl-2 mb-3 border-2 border-primary rounded-lg cursor-pointer" 
-                    v-model="formData.company"    
+                    v-model="formData.hotelname"    
                 />
 
                 <label for="default-range" class="text-primary">Number of hotels in group</label>

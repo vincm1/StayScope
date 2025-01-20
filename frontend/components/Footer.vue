@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-primary text-gray-300 py-10 px-10 border-t border-secondary">
+  <footer class="bg-primary text-gray-300 pt-10 px-10 border-t border-secondary">
     <div class="flex flex-col items-start lg:items-center justify-start lg:justify-center">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-screen-xl">
         <!-- Column 1: Company Info -->
@@ -56,6 +56,14 @@
             </button>
           </form>
         </div>
+      </div>
+    </div>
+    <div class="border-t border-grey pt-5 pb-2 mt-5">
+      <div class="flex flex-col items-center justify-center">
+        <p class="text-xs text-center">
+          &copy; {{ new Date().getFullYear() }} expentura a PyMinds UG (haftungsbeschraenkt)
+        </p>
+        <p class="text-xs text-center">All rights reserved.</p>
       </div>
     </div>
   </footer>

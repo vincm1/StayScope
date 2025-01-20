@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section class="software bg-white text-center py-20 text-primary">
+  <section class="software bg-white text-center py-20 text-primary" id="howitworks">
     <div class="pb-5 pt-10" data-aos="fade-up">
         <!-- Heading -->
         <h1 class="text-1xl text-grey text-playfair mb-5">

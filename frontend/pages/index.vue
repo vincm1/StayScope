@@ -7,6 +7,7 @@
     <LandingSoftware />
     <Testimonial />
     <Kpis />
+    <About />
     <LandingSteps />
     <Cta />
     <Whitepaper />

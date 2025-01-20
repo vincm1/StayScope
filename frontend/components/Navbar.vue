@@ -15,20 +15,20 @@ const toggleSidebar = () => {
 <template>
   <header class="flex justify-center mt-5 mb-10">
     <nav class="fixed flex justify-between mx-5 px-4 py-2 rounded-full gap-20 shadow-md min-w-[95%] sm:min-w-[95%] md:min-w-[50%]"
-    :class="{ 'bg-primary text-white lg:w-2/3 transition-all z-50 duration-300 ease-in-out': isScrolled, 'bg-white text-black w-auto': !isScrolled }"
+    :class="{ 'bg-primary text-white lg:w-2/3 transition-all z-50 duration-300 ease-in-out': isScrolled, 'bg-white text-primary w-auto': !isScrolled }"
     >
       <NuxtLink to="/">
-        <img 
+        <!-- <img 
           class="justify-start pt-1"
           :src="isScrolled ? '/images/logo-light.svg':'/images/logo.svg'"
           alt="logo" 
-        />
+        /> -->
+        <p class="justify-start text-2xl" id="navbrand">expentura</p>
       </NuxtLink>
 
       <div class="hidden sm:block nav-links space-x-6 align-center pt-1">
-        <NuxtLink to="/listings" class="hover:underline">Listings</NuxtLink>
-        <NuxtLink to="/about" class="hover:underline">About</NuxtLink>
-        <NuxtLink to="/contact" class="hover:underline">Contact</NuxtLink>
+        <NuxtLink to="#howitworks" class="hover:underline">How it works</NuxtLink>
+        <NuxtLink to="#about" class="hover:underline">About</NuxtLink>
       </div>
 
       <NuxtLink
@@ -103,6 +103,10 @@ const toggleSidebar = () => {
 
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+#navbrand {
+  font-family: 'Alegrya', sans-serif;
+  font-weight: 600;
+}
 </style>
 

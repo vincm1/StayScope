@@ -145,19 +145,6 @@ onUnmounted(() => {
             bgClass="bg-primary"
           />
         </NuxtLink>
-        <NuxtLink
-          to="/downloads/whitepaper"
-          class="items-center justify-center flex"
-        >
-          <ButtonBaseButton
-            sizeClass="lg"
-            bgClass="bg-none"
-            textClass="text-primary"
-            borderClass="border border-primary"
-          >
-            Whitepaper
-          </ButtonBaseButton>
-        </NuxtLink>
       </div>
     </div>
   </section>

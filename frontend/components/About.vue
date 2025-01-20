@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <section class="bg-primary px-20 py-20">
+  <section class="bg-primary px-20 py-20" id="about">
     <!-- Heading with Decorative Lines -->
     <div class="relative text-center mb-8">
       <div class="core-text text-4xl text-white font-semibold inline-block relative">
@@ -30,13 +30,13 @@
     <!-- Author Section -->
     <div class="flex items-center justify-center py-3">
       <img
-        class="w-12 h-12 rounded-full ring-2 ring-white"
-        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+        class="w-14 h-14 rounded-full ring-2 ring-secondary"
+        src="/images/founder.png"
         alt="Author Image"
       />
       <div class="ml-4 text-white">
-        <h2 class="text-lg font-semibold">Lance Co Ting Keh</h2>
-        <p class="text-sm">Co-Founder & CEO</p>
+        <h2 class="text-lg font-semibold">Vincent Michler</h2>
+        <p class="text-sm">Founder of expentura</p>
       </div>
     </div>
   </section>
