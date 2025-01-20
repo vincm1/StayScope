@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 
+// Access runtime config
+const config = useRuntimeConfig();
+
+// Base URL for API calls
+const apiBaseUrl = config.public.BASE_URL || 'http://localhost:3000';
+
 // Scroll and modal management
 const scrollThreshold = 1000; // Pixel scroll threshold
 const showModal = ref(false); // Modal visibility state
@@ -58,7 +64,7 @@ const handleSubmit = async () => {
   downloadButtonState.value = 'loading';
 
   try {
-    const response = await $fetch('http://localhost:3000/api/contact', {
+    const response = await $fetch(`${apiBaseUrl}/api/contact`, {
       method: 'POST',
       body: formData.value,
     });
