@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     'nuxt-aos',
     'nuxt-calendly',
     '@nuxt/image',
+    'nuxt-vercel-analytics',
   ],
   runtimeConfig: {
       MAILHOST: process.env.MAILHOST,
@@ -39,7 +40,8 @@ export default defineNuxtConfig({
         'faHeart',
         'faUtensils',
         'faQuoteLeft',
-        'faPaperPlane'
+        'faPaperPlane',
+        'faCircleCheck',
       ],
       regular: [
         'faLightbulb',

@@ -1,4 +1,8 @@
+<script setup lang="ts">
+</script>
+
 <template>
+    <Analytics />
     <NuxtLayout >
       <Navbar />
       <NuxtPage />
