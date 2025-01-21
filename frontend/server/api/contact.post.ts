@@ -68,7 +68,8 @@ export default defineEventHandler(async (event) => {
                 {
                     filename: 'expentura - Experience Economy Report.pdf',
                     path: filePath,
-                },    
+                },
+            ],
         });
 
         // Send notification email to admin
