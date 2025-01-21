@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 import handlebars from 'handlebars';
-import fs from 'fs';
+
 import { readFileSync } from 'fs';
 import { join } from 'path';
 

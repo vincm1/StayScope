@@ -5,7 +5,7 @@ import { ref, computed, onMounted, onUnmounted } from 'vue';
 const config = useRuntimeConfig();
 
 // Base URL for API calls
-const apiBaseUrl = config.public.BASE_URL || 'http://localhost:3000';
+const apiBaseUrl = config.public.BASE_URL;
 
 // Scroll and modal management
 const scrollThreshold = 1000; // Pixel scroll threshold
