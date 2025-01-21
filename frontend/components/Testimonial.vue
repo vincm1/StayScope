@@ -75,14 +75,14 @@ onUnmounted(() => {
       </p>
 
       <!-- Testimonial Card -->
-      <div class="flex justify-center">
+      <div class="flex align-center justify-center">
         <div class="card text-center w-full lg:w-3/4 2xl:w-1/2 bg-beige rounded-xl shadow-xl p-8 2xl:p-12 relative">
           <span class="hidden md:block">
             <div class="bg-primary absolute top-3 right-4 rounded-full m-1 p-1">
             <font-awesome
               :icon="['fas', 'quote-left']"
               class="text-secondary text-4xl 
-                    justify-center p-2 rounded-full"
+                    justify-center p-3 rounded-full"
               />
             </div>
           </span>
@@ -107,26 +107,26 @@ onUnmounted(() => {
             </div>
 
             <!-- Right Section: Clickable List -->
-            <ul class="flex space-x-6">
+            <ul class="flex justify-center align-center text-center space-x-6">
               <li>
                 <NuxtImg
-                  src="/images/clients/infinity.svg"
-                  @click="updateTestimonialContent('infiniti')"
-                  class="h-5 cursor-pointer"
+                  src="/images/clients/logo-crillon-le-brave.svg"
+                  @click="updateTestimonialContent('le brave')"
+                  class="h-10 cursor-pointer bg-primary opacity-80 p-2 rounded-full"
                 />
               </li>
               <li>
                 <NuxtImg
-                  src="/images/clients/mfinity.svg"
-                  @click="updateTestimonialContent('mfinity')"
-                  class="h-5 cursor-pointer"
+                  src="/images/clients/logo_lenz.png"
+                  @click="updateTestimonialContent('lenz')"
+                  class="h-10 cursor-pointer bg-primary opacity-80 p-2 rounded-full"
                 />
               </li>
               <li>
                 <NuxtImg
-                  src="/images/clients/caudile.svg"
-                  @click="updateTestimonialContent('caudile')"
-                  class="h-5 cursor-pointer"
+                  src="/images/clients/torglerhof.png"
+                  @click="updateTestimonialContent('torgglerhof')"
+                  class="h-10 cursor-pointer"
                 />
               </li>
             </ul>

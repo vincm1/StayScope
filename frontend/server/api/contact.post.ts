@@ -31,14 +31,8 @@ const createTransporter = () => {
 };
 
 const filePath = join(process.cwd(), './assets/expierence_economy_expentura.pdf');
-console.log('Resolved file path:', filePath); // Debugging the file path
 
 const transporter = createTransporter();
-
-console.log(`App is running in ${process.env.NODE_ENV === 'development' ? 'development' : 'production'} mode`);
-console.log('MAILHOST:', config.MAILHOST);
-console.log('MAILPORT:', config.MAILPORT);
-console.log('MAILUSER:', config.MAILUSER);
 
 export default defineEventHandler(async (event) => {
     try {

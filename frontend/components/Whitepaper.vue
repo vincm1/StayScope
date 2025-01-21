@@ -21,6 +21,7 @@ const formData = ref({
   numhotels: sliderValue.value,
   email: '',
 });
+
 const errorMessages = ref<string[]>([]); // Stores validation errors
 const downloadButtonState = ref<'default' | 'success' | 'loading'>('default'); // Button state
 const waiting = ref(false); // Tracks submission status
@@ -59,7 +60,7 @@ const handleSubmit = async () => {
   if (!validateForm()) {
     return; // Exit if validation fails
   }
-
+  
   console.log(`${apiBaseUrl}/api/contact`);
   waiting.value = true;
   downloadButtonState.value = 'loading';

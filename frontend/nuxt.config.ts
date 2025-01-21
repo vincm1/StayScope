@@ -5,9 +5,6 @@ export default defineNuxtConfig({
   alias: {
     assets: '/<rootDir>/assets',
   },
-  public: {
-    BASE_URL: process.env.BASE_URL,
-  },
   modules: [
     '@vesp/nuxt-fontawesome',
     '@vueuse/nuxt',
@@ -25,6 +22,9 @@ export default defineNuxtConfig({
       MAILUSER: process.env.MAILUSER,
       MAILPASSWORD: process.env.MAILPASSWORD,
       CONTACTMAIL: process.env.CONTACTMAIL,
+    public: {
+      BASE_URL: process.env.BASE_URL,
+    },
   },
   css: ['~/assets/scss/main.scss'],
   fontawesome: {
@@ -52,8 +52,7 @@ export default defineNuxtConfig({
         'faMessage',
         'faSquareCheck',
       ],
-
-    }
+    },
   },
   postcss: {
     plugins: {
