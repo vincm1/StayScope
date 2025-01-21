@@ -31,8 +31,8 @@ const createTransporter = () => {
 
 // File path for the PDF attachment
 const filePath = process.env.NODE_ENV === 'development'
-    ? join(process.cwd(), 'public/experience_economy_expentura.pdf') // Local
-    : `${config.public.BASE_URL}/experience_economy_expentura.pdf`; // Static file URL in production
+    ? join(process.cwd(), 'public/experience_economy_expentura_s.pdf') // Local
+    : `${config.public.BASE_URL}/experience_economy_expentura_s.pdf`; // Static file URL in production
 
 const transporter = createTransporter();
 
@@ -64,19 +64,24 @@ export default defineEventHandler(async (event) => {
             to: body.email,
             subject: 'Your Experience Economy Report Request',
             html: htmlContent,
+            attachments: [
+                {
+                    filename: 'expentura - Experience Economy Report.pdf',
+                    path: filePath,
+                },    
         });
 
         // Send notification email to admin
-        // await transporter.sendMail({
-        //     from: `Vincent from Expentura <${config.MAILUSER}>`,
-        //     to: config.MAILUSER,
-        //     subject: `Whitepaper Requested by ${firstName}`,
-        //     html: `
-        //         <p>${firstName} ${lastName} from Hotel:</p>
-        //         <p><strong>${hotelName}</strong> with Hotels: ${numHotels}</p>
-        //         <p>Requested the whitepaper.</p>
-        //     `,
-        // });
+        await transporter.sendMail({
+            from: `Vincent from Expentura <${config.MAILUSER}>`,
+            to: config.MAILUSER,
+            subject: `Whitepaper Requested by ${firstName}`,
+            html: `
+                <p>${firstName} ${lastName} from Hotel:</p>
+                <p><strong>${hotelName}</strong> with Hotels: ${numHotels}</p>
+                <p>Requested the whitepaper.</p>
+            `,
+        });
 
         return {
             success: true,
