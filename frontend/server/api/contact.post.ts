@@ -58,29 +58,13 @@ export default defineEventHandler(async (event) => {
 
         const handlebarsTemplate = handlebars.compile(htmlTemplateContent);
         const htmlContent = handlebarsTemplate({ firstName, lastName });
-
-        console.log('Sending email...');
-        const info = await transporter.sendMail({
-          from: `Vincent from Expentura <${config.MAILUSER}>`,
-          to: body.email,
-          subject: 'Test Email',
-          text: 'This is a test email from your Nuxt.js application.',
-        });
-        console.log('Email sent:', info.messageId);
         
-        // Send email to the recipient
-        // await transporter.sendMail({
-        //     from: `Vincent from Expentura <${config.MAILUSER}>`,
-        //     to: body.email,
-        //     subject: 'Your Experience Economy Report Request',
-        //     html: htmlContent,
-        //     attachments: [
-        //         {
-        //             filename: 'experience_economy_expentura.pdf',
-        //             path: filePath,
-        //         },
-        //     ],
-        // });
+        await transporter.sendMail({
+            from: `Vincent from Expentura <${config.MAILUSER}>`,
+            to: body.email,
+            subject: 'Your Experience Economy Report Request',
+            html: htmlContent,
+        });
 
         // Send notification email to admin
         // await transporter.sendMail({
