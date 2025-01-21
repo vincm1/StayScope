@@ -1,6 +1,5 @@
 import nodemailer from 'nodemailer';
 import handlebars from 'handlebars';
-
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
@@ -11,7 +10,7 @@ const createTransporter = () => {
     const transportOptions = {
         host: config.MAILHOST,
         port: config.MAILPORT,
-        secure: true,
+        secure: true, // Use secure connection
         auth: {
             user: config.MAILUSER,
             pass: config.MAILPASSWORD,
@@ -30,7 +29,10 @@ const createTransporter = () => {
     return nodemailer.createTransport(transportOptions);
 };
 
-const filePath = join(process.cwd(), 'public/expierence_economy_expentura.pdf');
+// File path for the PDF attachment
+const filePath = process.env.NODE_ENV === 'development'
+    ? join(process.cwd(), 'public/experience_economy_expentura.pdf') // Local
+    : `${config.public.BASE_URL}/experience_economy_expentura.pdf`; // Static file URL in production
 
 const transporter = createTransporter();
 
@@ -49,9 +51,11 @@ export default defineEventHandler(async (event) => {
         const hotelName = body.hotelname ? body.hotelname.trim() : '';
         const numHotels = body.numhotels || 0;
 
-        // Read and compile the HTML template
-        const templatePath = join(process.cwd(), 'public/email_templates/whitepaper_download.html');
-        const htmlTemplateContent = readFileSync(templatePath, 'utf8');
+        // Handle email template for dynamic content
+        const htmlTemplateContent = process.env.NODE_ENV === 'development'
+            ? readFileSync(join(process.cwd(), 'public/email_templates/whitepaper_download.html'), 'utf8') // Local
+            : await fetch(`${config.public.BASE_URL}/email_templates/whitepaper_download.html`).then(res => res.text()); // Static in production
+
         const handlebarsTemplate = handlebars.compile(htmlTemplateContent);
         const htmlContent = handlebarsTemplate({ firstName, lastName });
 
