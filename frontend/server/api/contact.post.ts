@@ -30,7 +30,7 @@ const createTransporter = () => {
     return nodemailer.createTransport(transportOptions);
 };
 
-const filePath = join(process.cwd(), './assets/expierence_economy_expentura.pdf');
+const filePath = join(process.cwd(), './public/expierence_economy_expentura.pdf');
 
 const transporter = createTransporter();
 
@@ -50,7 +50,7 @@ export default defineEventHandler(async (event) => {
         const numHotels = body.numhotels || 0;
 
         // Read and compile the HTML template
-        const templatePath = join(process.cwd(), './assets/email_templates/whitepaper_download.html');
+        const templatePath = join(process.cwd(), './public/email_templates/whitepaper_download.html');
         const htmlTemplateContent = readFileSync(templatePath, 'utf8');
         const handlebarsTemplate = handlebars.compile(htmlTemplateContent);
         const htmlContent = handlebarsTemplate({ firstName, lastName });
