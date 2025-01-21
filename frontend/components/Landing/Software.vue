@@ -27,7 +27,7 @@
               EFFORTLESS INTEGRATION
             </h1>
             <h3 class="text-4xl text-primary font-bold mb-2">API & WHITELABEL SOLUTIONS</h3>
-            <p class="text-lg text-grey pt-4">
+            <p class="text-lg lg:text-xl text-grey pt-4">
               Easily integrate our platform into your existing systems or opt for a fully branded white-label solution.
               Enhance guest experiences effortlessly—perfect for any hotel, whether you’re a global chain or a boutique property.
             </p>
@@ -40,7 +40,7 @@
               STREAMLINED CHECKOUT
             </h1>
             <h3 class="text-4xl font-bold mb-2">Effortless Upgrades & Add-Ons</h3>
-            <p class="text-lg text-grey pt-4">Simplify the booking process with a checkout experience that boosts revenue. 
+            <p class="text-lg lg:text-xl text-grey pt-4">Simplify the booking process with a checkout experience that boosts revenue. 
               Offer room upgrades, exclusive experiences, and personalized add-ons seamlessly—making every transaction smooth, fast, and guest-friendly.
             </p>
           </div>
@@ -54,7 +54,7 @@
               CURATED DASHBOARDS
             </h1>
             <h3 class="text-4xl font-bold mb-2">Control Experiences with Ease</h3>
-            <p class="text-lg text-grey pt-4">Stay in command with a dashboard designed for simplicity and impact. 
+            <p class="text-lg lg:text-xl text-grey pt-4">Stay in command with a dashboard designed for simplicity and impact. 
               Monitor performance, manage experiences, and fine-tune offerings—all in real time to enhance guest satisfaction.
             </p>
           </div>
@@ -66,7 +66,7 @@
               SEAMLESS CONTROL, ENDLESS OPPORTUNITIES
             </h1>
             <h3 class="text-4xl font-bold mb-2">Manage Experiences & Partner Operators</h3>
-            <p class="text-lg text-grey pt-4">
+            <p class="text-lg lg:text-xl text-grey pt-4">
               Quickly manage room upgrades, exclusive experiences, and partnerships with operators—all from one platform.
               Simplify coordination, tailor offerings, and create memorable guest experiences and drive revenue growth with ease.
             </p>
