@@ -59,31 +59,40 @@ export default defineEventHandler(async (event) => {
         const handlebarsTemplate = handlebars.compile(htmlTemplateContent);
         const htmlContent = handlebarsTemplate({ firstName, lastName });
 
-        // Send email to the recipient
-        await transporter.sendMail({
-            from: `Vincent from Expentura <${config.MAILUSER}>`,
-            to: body.email,
-            subject: 'Your Experience Economy Report Request',
-            html: htmlContent,
-            attachments: [
-                {
-                    filename: 'experience_economy_expentura.pdf',
-                    path: filePath,
-                },
-            ],
+        console.log('Sending email...');
+        const info = await transporter.sendMail({
+          from: `Vincent from Expentura <${config.MAILUSER}>`,
+          to: body.email,
+          subject: 'Test Email',
+          text: 'This is a test email from your Nuxt.js application.',
         });
+        console.log('Email sent:', info.messageId);
+        
+        // Send email to the recipient
+        // await transporter.sendMail({
+        //     from: `Vincent from Expentura <${config.MAILUSER}>`,
+        //     to: body.email,
+        //     subject: 'Your Experience Economy Report Request',
+        //     html: htmlContent,
+        //     attachments: [
+        //         {
+        //             filename: 'experience_economy_expentura.pdf',
+        //             path: filePath,
+        //         },
+        //     ],
+        // });
 
         // Send notification email to admin
-        await transporter.sendMail({
-            from: `Vincent from Expentura <${config.MAILUSER}>`,
-            to: config.MAILUSER,
-            subject: `Whitepaper Requested by ${firstName}`,
-            html: `
-                <p>${firstName} ${lastName} from Hotel:</p>
-                <p><strong>${hotelName}</strong> with Hotels: ${numHotels}</p>
-                <p>Requested the whitepaper.</p>
-            `,
-        });
+        // await transporter.sendMail({
+        //     from: `Vincent from Expentura <${config.MAILUSER}>`,
+        //     to: config.MAILUSER,
+        //     subject: `Whitepaper Requested by ${firstName}`,
+        //     html: `
+        //         <p>${firstName} ${lastName} from Hotel:</p>
+        //         <p><strong>${hotelName}</strong> with Hotels: ${numHotels}</p>
+        //         <p>Requested the whitepaper.</p>
+        //     `,
+        // });
 
         return {
             success: true,
