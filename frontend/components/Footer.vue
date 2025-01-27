@@ -19,6 +19,9 @@
             <li><a href="#" class="hover:underline">About Us</a></li>
             <li><a href="#" class="hover:underline">Services</a></li>
             <li><a href="#" class="hover:underline">Contact</a></li>
+            <li>
+              <NuxtLink to="/imprint" class="hover:underline">Imprint</NuxtLink>
+            </li>
           </ul>
         </div>
         

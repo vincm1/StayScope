@@ -1,7 +1,9 @@
 <template>
-    <body class="bg-primary">
-        <slot></slot>
-    </body>
+    <Navbar />
+        <body class="bg-primary">
+            <slot />
+        </body>
+    <Footer />
 </template>
 
 <style scoped>

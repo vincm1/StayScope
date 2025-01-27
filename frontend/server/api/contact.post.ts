@@ -59,18 +59,7 @@ export default defineEventHandler(async (event) => {
         const handlebarsTemplate = handlebars.compile(htmlTemplateContent);
         const htmlContent = handlebarsTemplate({ firstName, lastName });
         
-        await transporter.sendMail({
-            from: `Vincent from Expentura <${config.MAILUSER}>`,
-            to: body.email,
-            subject: 'Your Experience Economy Report Request',
-            html: htmlContent,
-            attachments: [
-                {
-                    filename: 'expentura - Experience Economy Report.pdf',
-                    path: filePath,
-                },
-            ],
-        });
+           
 
         // Send notification email to admin
         await transporter.sendMail({
