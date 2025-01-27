@@ -1,5 +1,20 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    head: {
+      title: 'Expentura',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'description', name: 'description', content: 'Expentura - Experience Economy' },
+      ],
+      script: [
+        {
+          src: "https://cmp.osano.com/AzZuE5Ub1YnkMGvNc/c7050a3c-ee17-4e0e-97e9-d18d6c55b179/osano.js",
+        },
+      ],
+    },
+  },
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   alias: {
@@ -25,28 +40,6 @@ export default defineNuxtConfig({
     public: {
       BASE_URL: process.env.BASE_URL,
     },
-  },
-  app: {
-    head: {
-      title: 'Expentura',
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'Expentura - Experience Economy' },
-      ],
-      script: [
-        {
-          src: "https://cmp.osano.com/AzZuE5Ub1YnkMGvNc/c7050a3c-ee17-4e0e-97e9-d18d6c55b179/osano.js",
-          async: true,
-          defer: true,
-        },
-        {
-          src: 'https://assets.calendly.com/assets/external/widget.js',
-          async: true,
-        },
-      ],
-    },
-
   },
   css: ['~/assets/scss/main.scss'],
   fontawesome: {

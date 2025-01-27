@@ -172,13 +172,19 @@
                 Wir weisen Sie bei den jeweiligen Diensten innerhalb der Datenschutzerklärung darauf hin, auf welcher Rechtsgrundlage diese Daten verarbeitet werden.
             </p>
             <table class="mt-3">
-                <th>
-                    <td>Name</td>
-                    <td>Typ</td>
-                    <td>Verwendungszweck</td>
-                    <td>Speicherdauer</td>
-                </th>
-            </table>
+                <thead>
+                    <tr>
+                        <th>
+                            <td>Name</td>
+                            <td>Typ</td>
+                            <td>Verwendungszweck</td>
+                            <td>Speicherdauer</td>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+             </table>
         </div>
 
         <div class="pt-4">

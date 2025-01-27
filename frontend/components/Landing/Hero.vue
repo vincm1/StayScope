@@ -22,9 +22,9 @@
           <span>Trusted by <span class="text-secondary font-play">leading</span> hotels:</span>
           <ul class="flex justify-around space-x-5 ml-5">
                       
-              <li>Steigenberger</li>
-              <li>Marriott</li>
-              <li>Radisson</li>
+              <li>Torggler Hof</li>
+              <li>Hotel Lenz</li>
+              <li>Hotel Crillon Le Brave</li>
           </ul>
         </div>
       </div>
