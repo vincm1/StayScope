@@ -60,6 +60,7 @@ export default defineNuxtConfig({
         'faQuoteLeft',
         'faPaperPlane',
         'faCircleCheck',
+        'faDownload',
       ],
       regular: [
         'faLightbulb',
