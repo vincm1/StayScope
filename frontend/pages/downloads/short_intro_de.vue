@@ -57,7 +57,7 @@ const isHovered = ref(false);
     >
       <!-- SVG Image -->
       <img class="rounded-lg transition-transform duration-300 hover:opacity-10 md:w-1/2" 
-        src="public/images/cover.svg" alt="Cover Image">
+        src="/images/cover_exp.svg" alt="Cover Image">
 
       <!-- Hover Effect: Download Button -->
       <div v-if="isHovered" class="absolute inset-0 flex justify-center items-center">
