@@ -117,90 +117,77 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll));
   <!-- Modal -->
   <div
     v-if="showModal"
-    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
   >
-    <div class="border-2 border-primary bg-beige rounded-xl shadow-lg max-w-2xl w-full p-6 relative">
+    <div class="border-2 border-primary bg-beige rounded-xl shadow-lg w-full max-w-[90%] md:max-w-2xl mx-auto p-6 min-h-[60vh] md:min-h-[70vh] max-h-[90vh] overflow-y-auto flex flex-col justify-center relative">
       <!-- Close Button -->
       <button
         @click="closeModal"
-        class="absolute top-4 right-4 text-white bg-primary hover:text-secondary rounded-full w-8 h-8 flex items-center justify-center"
+        class="absolute top-4 right-2 text-white bg-primary hover:text-secondary rounded-full w-8 h-8 flex items-center justify-center z-50"
       >
         X
       </button>
 
       <!-- Modal Header -->
-      <div class="text-center mb-7">
+      <div class="modal-header text-center pt-20">
         <h1 class="text-grey text-sm">Download our Report</h1>
-        <h2 class="text-primary text-2xl mt-1">
-          Get the latest insights about the <br /> Experience Economy
+        <h2 class="text-primary text-2xl pt-2">
+          Get the latest insights
+        </h2>
+        <h2 class="text-primary text-2xl">
+          about the Experience Economy
         </h2>
       </div>
 
       <!-- Modal Body -->
-      <div class="grid grid-cols-2 gap-6">
+      <div class="modal-body grid grid-cols-1 md:grid-cols-2 pt-10 gap-4">
         <!-- Image -->
-        <div>
+        <div class="flex justify-center items-center">
           <img
             src="/images/kite_whitepaper.jpg"
             alt="Kite Whitepaper"
-            class="rounded h-full w-auto"
+            class="rounded w-full max-w-[200px] md:max-w-full"
           />
         </div>
 
         <!-- Form -->
-        <form @submit.prevent="handleSubmit" class="col-span-1">
-          <!-- First Name -->
-          <div class="form-group mb-4">
+        <form @submit.prevent="handleSubmit" class="w-full space-y-4">
+          <div class="form-group">
             <label for="firstname">Firstname*</label>
             <input
               id="firstname"
               v-model="formData.firstname"
               type="text"
-              placeholder="Max"
               class="w-full border rounded-lg p-2"
+              placeholder="Max"
               required
             />
-            <p
-              v-if="errorMessages.includes('First name must be at least 2 characters long.')"
-              class="text-red-500 text-sm"
-            >
-              First name must be at least 2 characters long.
-            </p>
           </div>
 
-          <!-- Last Name -->
-          <div class="form-group mb-4">
+          <div class="form-group">
             <label for="lastname">Lastname*</label>
             <input
               id="lastname"
               v-model="formData.lastname"
               type="text"
-              placeholder="Mustermann"
               class="w-full border rounded-lg p-2"
+              placeholder="Mustermann"
               required
             />
-            <p
-              v-if="errorMessages.includes('Last name must be at least 2 characters long.')"
-              class="text-red-500 text-sm"
-            >
-              Last name must be at least 2 characters long.
-            </p>
           </div>
 
-          <!-- Hotel Name -->
-          <div class="form-group mb-4">
+          <div class="form-group">
             <label for="hotelname">Hotel- / Company Name</label>
             <input
               id="hotelname"
               v-model="formData.hotelname"
               type="text"
-              placeholder="Alpenglück"
               class="w-full border rounded-lg p-2"
+              placeholder="Hotel Alpenglück"
             />
           </div>
 
-          <!-- Slider -->
-          <div class="form-group mb-4">
+          <div class="form-group">
             <label for="numhotels">Number of Hotels</label>
             <input
               id="numhotels"
@@ -208,35 +195,28 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll));
               v-model="syncSliderValue"
               min="1"
               max="100"
-              class="w-full"
+              class="appearance-none bg-secondary rounded-lg slider w-full my-2"
             />
             <p>{{ sliderValue }}</p>
           </div>
 
-          <!-- Email -->
-          <div class="form-group mb-4">
+          <div class="form-group">
             <label for="email">Email*</label>
             <input
               id="email"
               v-model="formData.email"
               type="email"
-              placeholder="E-Mail"
               class="w-full border rounded-lg p-2"
+              placeholder="max.mustermann@hotel-alpenglueck.de"
               required
             />
-            <p
-              v-if="errorMessages.includes('Please enter a valid email address.')"
-              class="text-red-500 text-sm"
-            >
-              Please enter a valid email address.
-            </p>
           </div>
 
           <!-- Buttons -->
-          <div>
+          <div class="flex flex-col items-center space-y-2">
             <button
               v-if="downloadButtonState === 'default'"
-              class="w-full bg-primary text-white p-2 rounded-lg hover:text-md hover:text-secondary"
+              class="w-full bg-primary text-white p-2 rounded-lg"
             >
               Download
             </button>
@@ -244,7 +224,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll));
               v-else-if="downloadButtonState === 'success'"
               class="w-full bg-primary text-white p-2 rounded-lg"
             >
-              <font-awesome :icon="['fas', 'circle-check']" />
+              ✅ Success
             </button>
             <div
               v-else-if="downloadButtonState === 'loading'"
@@ -259,67 +239,23 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll));
   </div>
 </template>
 
-<style scoped lang="scss">
-input[type="range"] {
-  -webkit-appearance: none; /* Remove default styles for WebKit browsers */
-  width: 100%;
-  height: 8px; /* Match the track height */
-  background: rgba(92, 255, 152, 0.4); /* Track secondary color */
-  border-radius: 4px; /* Rounded track edges */
-  outline: none; /* Remove focus outline */
-
-  /* Track styles */
-  &::-webkit-slider-runnable-track {
-    background: rgba(92, 255, 152, 0.4); /* Track color */
-    height: 8px; /* Same as track height */
-    border-radius: 4px;
+<style scoped>
+/* Ensure modal doesn't touch the edges on small screens */
+@media (max-width: 768px) {
+  .max-w-lg {
+    max-width: 90%;
+    margin: auto;
   }
 
-  /* Thumb styles */
-  &::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Remove default thumb styles */
-    appearance: none;
-    width: 16px; /* Thumb size */
-    height: 16px; /* Thumb size */
-    background: #5cff98; /* Solid secondary color */
-    border-radius: 50%; /* Circular thumb */
-    cursor: pointer;
-    margin-top: -4px; /* Align thumb center with track center */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.2s ease;
-
-    &:hover {
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
-  }
-
-  /* Focused Thumb */
-  &::-webkit-slider-thumb:focus {
-    outline: 2px solid #3498db; /* Primary color for focus */
-    outline-offset: 2px;
-  }
-
-  /* Firefox Track and Thumb */
-  &::-moz-range-track {
-    background: rgba(92, 255, 152, 0.4); /* Track color */
-    height: 8px;
-    border-radius: 4px;
-  }
-
-  &::-moz-range-thumb {
-    width: 16px; /* Thumb size */
-    height: 16px; /* Thumb size */
-    background: #5cff98; /* Thumb color */
-    border-radius: 50%; /* Circular thumb */
-    cursor: pointer;
-    margin-top: 0; /* Firefox does not need alignment correction */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  img {
+    max-width: 180px;
+    height: auto;
   }
 }
 
 .loader {
-  border: 4px solid rgba(0, 0, 0, 0.1); /* Light gray */
-  border-top: 4px solid #5cff98; /* Blue */
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #5cff98;
   border-radius: 50%;
   width: 24px;
   height: 24px;
@@ -335,5 +271,13 @@ input[type="range"] {
   }
 }
 
-
+.slider {
+  @apply
+  [&::-webkit-slider-runnable-track]:rounded-full 
+  [&::-webkit-slider-thumb]:appearance-none 
+  [&::-webkit-slider-thumb]:h-5 
+  [&::-webkit-slider-thumb]:w-5 
+  [&::-webkit-slider-thumb]:rounded-full 
+  [&::-webkit-slider-thumb]:bg-primary;
+}
 </style>
