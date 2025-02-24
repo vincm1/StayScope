@@ -1,4 +1,7 @@
 import nodemailer from 'nodemailer';
+import handlebars from 'handlebars';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 
 const config = useRuntimeConfig();
 
@@ -26,37 +29,25 @@ const createTransporter = () => {
     return nodemailer.createTransport(transportOptions);
 };
 
+
 const transporter = createTransporter();
 
 export default defineEventHandler(async (event) => {
     try {
-        const body = await readBody(event);
-
-        // Validate required fields
-        if (!body.email || !body.hotelUrl) {
-            throw new Error('Missing required fields: email or hotelName');
-        }
-        
-        console.log('Sending email:', body);
-        // Extract data from the request body
-        const email = body.email.trim();
-        const hotelUrl = body.hotelUrl.trim();
-
+       
         // Send notification email to admin
         await transporter.sendMail({
             from: `Vincent from Expentura <${config.MAILUSER}>`,
             to: config.MAILUSER,
-            subject: `Whitepaper Requested by ${email}`,
+            subject: `Whitepaper download`,
             html: `
-                <p>Email: ${email}</p>
-                <p>Hotel Name: ${hotelUrl}</p>
-                <p>Requested the whitepaper.</p>
+                Whitepaper was requested.
             `,
         });
 
         return {
             success: true,
-            message: 'Email sent successfully',
+            message: 'Emails sent successfully',
             code: 200,
         };
 

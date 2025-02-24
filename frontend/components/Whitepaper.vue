@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted } from 'vue';
+import { ref, computed, onMounted, onUnmounted, defineExpose } from 'vue';
 
 // Access runtime config
 const config = useRuntimeConfig();
@@ -12,6 +12,11 @@ const scrollThreshold = 1000; // Pixel scroll threshold
 const showModal = ref(false); // Modal visibility state
 const hasClosedModal = ref(false); // Track if modal was closed
 const sliderValue = ref(10); // Slider value
+
+const openModal = () => {
+  showModal.value = true;
+  hasClosedModal.value = false;
+};
 
 // Form state and validation
 const formData = ref({
@@ -111,6 +116,8 @@ const syncSliderValue = computed({
 // Event listeners for scroll
 onMounted(() => window.addEventListener('scroll', handleScroll));
 onUnmounted(() => window.removeEventListener('scroll', handleScroll));
+
+defineExpose({openModal, closeModal});	
 </script>
 
 <template>

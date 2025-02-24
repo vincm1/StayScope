@@ -1,12 +1,8 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-const threshhold = 400
-const {x, y, isScrolled} = useScroll(threshhold)
+import { ref } from 'vue';
 
-// State for sidebar toggle
 const isSidebarOpen = ref(false);
 
-// Function to toggle sidebar
 const toggleSidebar = () => {
   isSidebarOpen.value = !isSidebarOpen.value;
 };
@@ -29,6 +25,7 @@ const toggleSidebar = () => {
       <div class="hidden sm:block nav-links space-x-6 align-center pt-1">
         <NuxtLink to="#howitworks" class="hover:underline">How it works</NuxtLink>
         <NuxtLink to="#about" class="hover:underline">About</NuxtLink>
+        <NuxtLink to="/downloads/short_intro_de" class="hover:underline">Whitepaper</NuxtLink>
       </div>
 
       <NuxtLink
@@ -85,9 +82,9 @@ const toggleSidebar = () => {
           </button>
         </div>
         <div class="flex text-white flex-col items-center justify-center space-y-6 py-10 mx-5">
-          <NuxtLink to="/listings" class="hover:underline" @click="toggleSidebar">Listings</NuxtLink>
-          <NuxtLink to="/about" class="hover:underline" @click="toggleSidebar">About</NuxtLink>
-          <NuxtLink to="/contact" class="hover:underline" @click="toggleSidebar">Contact</NuxtLink>
+          <NuxtLink to="#howitworks" class="hover:underline" @click="toggleSidebar">How it Works</NuxtLink>
+          <NuxtLink to="#about" class="hover:underline" @click="toggleSidebar">About</NuxtLink>
+          <NuxtLink to="/downloads/short_intro_de" class="hover:underline">Whitepaper</NuxtLink>
           <NuxtLink to="#book-demo">
             <ButtonBaseButton
               bgClass="bg-secondary"
