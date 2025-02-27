@@ -17,6 +17,7 @@ const isSidebarOpen = ref(false);
 const toggleSidebar = () => {
   isSidebarOpen.value = !isSidebarOpen.value;
 };
+
 </script>
 
 <template>
@@ -34,13 +35,13 @@ const toggleSidebar = () => {
       </NuxtLink>
 
       <div class="hidden sm:block nav-links space-x-6 align-center pt-1">
-        <NuxtLink to="#howitworks" class="hover:underline">How it works</NuxtLink>
-        <NuxtLink to="#about" class="hover:underline">About</NuxtLink>
+        <NuxtLink to="/#how-it-works" class="hover:underline">How it works</NuxtLink>
+        <NuxtLink to="/#about" class="hover:underline">About</NuxtLink>
         <NuxtLink to="/downloads/short_intro_de" class="hover:underline">Whitepaper</NuxtLink>
       </div>
 
       <NuxtLink
-         to="#book-demo"
+         to="/#book-demo"
          class="hidden md:block"
         >
         <ButtonBaseButton
@@ -93,10 +94,10 @@ const toggleSidebar = () => {
           </button>
         </div>
         <div class="flex text-white flex-col items-center justify-center space-y-6 py-10 mx-5">
-          <NuxtLink to="#howitworks" class="hover:underline" @click="toggleSidebar">How it Works</NuxtLink>
-          <NuxtLink to="#about" class="hover:underline" @click="toggleSidebar">About</NuxtLink>
+          <NuxtLink to="/#howitworks" class="hover:underline" @click="toggleSidebar">How it Works</NuxtLink>
+          <NuxtLink to="/#about" class="hover:underline" @click="toggleSidebar">About</NuxtLink>
           <NuxtLink to="/downloads/short_intro_de" class="hover:underline">Whitepaper</NuxtLink>
-          <NuxtLink to="#book-demo">
+          <NuxtLink to="/#book-demo">
             <ButtonBaseButton
               bgClass="bg-secondary"
               textClass="text-primary"
