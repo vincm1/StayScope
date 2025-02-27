@@ -1,6 +1,17 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+const isScrolled = ref(false);
 
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 300;
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
 const isSidebarOpen = ref(false);
 
 const toggleSidebar = () => {
